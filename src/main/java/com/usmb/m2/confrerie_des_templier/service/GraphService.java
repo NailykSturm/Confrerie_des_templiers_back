@@ -21,7 +21,14 @@ public class GraphService {
         try {
             String path = "src/main/resources/";
             ObjectMapper objectMapper = new ObjectMapper();
-            File file = new File(path + "game.json");
+            this.initGames(path, objectMapper);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void initGames(String path, ObjectMapper objectMapper) throws IOException {
+        File file = new File(path + "game.json");
             JsonNode jsonNode = objectMapper.readTree(file);
             JsonNode main = jsonNode.get("principale");
             JsonNode spinOff = jsonNode.get("spinOff");
@@ -33,6 +40,7 @@ public class GraphService {
                 game.setDate(node.get("date").asText());
                 game.setImg(node.get("img").asText());
                 game.setType(EGameType.Principale);
+                this.graph.addNode(game);
                 games[i] = game;
                 i++;
             }
@@ -42,13 +50,11 @@ public class GraphService {
                 game.setDate(node.get("date").asText());
                 game.setImg(node.get("img").asText());
                 game.setType(EGameType.SpinOff);
+                this.graph.addNode(game);
                 games[i] = game;
                 i++;
             }
 
             System.out.println(Arrays.toString(games));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
