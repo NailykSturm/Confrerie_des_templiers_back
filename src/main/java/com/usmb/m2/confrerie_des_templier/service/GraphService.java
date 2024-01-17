@@ -79,8 +79,4 @@ public class GraphService {
         }
         System.out.println(Arrays.toString(locations));
     }
-
-    private void initSupports(String path, ObjectMapper objectMapper) throws IOException {
-
-    }
 }
