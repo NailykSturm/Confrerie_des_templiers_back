@@ -5,9 +5,15 @@ import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Node {
+public class Node {
     private String name;
     private List<Edge> edges = new ArrayList<>();
+
+    public Node() {}
+
+    public Node(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
