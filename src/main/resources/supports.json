@@ -1,0 +1,96 @@
+{
+    "manufacturers": ["Nintendo", "Sony", "Microsoft"],
+    "generations": ["Consoles de jeux vidéo de septième génération", "Consoles de jeux vidéo de huitième génération", "Consoles de jeux vidéo de neuvième génération"],
+    "supports": [
+        {
+            "name": "Casque de réalité virtuelle",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Oculus_Quest.jpeg"
+        },
+        {
+            "name": "Ordinateur personnel",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Computer_home_station.jpg"
+        },
+        {
+            "name": "Téléphone mobile",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Samsung_Galaxy_Note_10.png"
+        },
+        {
+            "name": "Nintendo DS",
+            "manufacturer": "Nintendo",
+            "generation": "Consoles de jeux vidéo de septième génération",
+            "date": "2004-11-21",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Nintendo-DS-Fat-Blue.png"
+        },
+        {
+            "name": "Wii U",
+            "manufacturer": "Nintendo",
+            "generation": "Consoles de jeux vidéo de huitième génération",
+            "date": "2012-11-30",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Wii_U_Console_and_Gamepad.png"
+        },
+        {
+            "name": "Nintendo Switch",
+            "manufacturer": "Nintendo",
+            "generation": "Consoles de jeux vidéo de neuvième génération",
+            "date": "2017-03-03",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Nintendo_Switch_Console.png"
+        },
+        {
+            "name": "PlayStation Portable",
+            "manufacturer": "Sony",
+            "generation": "Consoles de jeux vidéo de septième génération",
+            "date": "2005-08-02",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/46/Psp-1000.jpg"
+        },
+        {
+            "name": "PlayStation Vita",
+            "manufacturer": "Sony",
+            "generation": "Consoles de jeux vidéo de huitième génération",
+            "date": "2011-12-17",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/3/3f/PlayStation_Vita_illustration.svg"
+        },
+        {
+            "name": "PlayStation 3",
+            "manufacturer": "Sony",
+            "generation": "Consoles de jeux vidéo de septième génération",
+            "date": "2006-11-17",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/d/d3/PS3Versions.png"
+        },
+        {
+            "name": "PlayStation 4",
+            "manufacturer": "Sony",
+            "generation": "Consoles de jeux vidéo de huitième génération",
+            "date": "2013-11-29",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/PS4-Console-wDS4.png"
+        },
+        {
+            "name": "PlayStation 5",
+            "manufacturer": "Sony",
+            "generation": "Consoles de jeux vidéo de neuvième génération",
+            "date": "2020-11-12",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png"
+        },
+        {
+            "name": "Xbox 360",
+            "manufacturer": "Microsoft",
+            "generation": "Consoles de jeux vidéo de septième génération",
+            "date": "2005-11-22",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/0/03/Xbox-360-Consoles-Infobox.png"
+        },
+        {
+            "name": "Xbox One",
+            "manufacturer": "Microsoft",
+            "generation": "Consoles de jeux vidéo de huitième génération",
+            "date": "2013-11-22",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Microsoft-Xbox-One-Console-wKinect.png"
+        },
+        {
+            "name": "Xbox Series",
+            "manufacturer": "Microsoft",
+            "generation": "Consoles de jeux vidéo de neuvième génération",
+            "date": "2020-11-10",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/1/12/Xbox_Series_X_2.jpg"
+        }
+        
+    ]
+}

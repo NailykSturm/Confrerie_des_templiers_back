@@ -64,19 +64,23 @@ public class GraphService {
 
     private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
         File file = new File(path + "locations.json");
-            JsonNode locationNodes = objectMapper.readTree(file);
-            Location[] locations = new Location[locationNodes.size()];
-            int i = 0;
-            for (JsonNode node : locationNodes) {
-                Location location = new Location();
-                location.setName(node.get("name").asText());
-                JsonNode imagesNode = node.get("images");
-                Iterator<String> iterator = imagesNode.fieldNames();
-                iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
-                this.graph.addNode(location);
-                locations[i] = location;
-                i++;
-            }
-            System.out.println(Arrays.toString(locations));
+        JsonNode locationNodes = objectMapper.readTree(file);
+        Location[] locations = new Location[locationNodes.size()];
+        int i = 0;
+        for (JsonNode node : locationNodes) {
+            Location location = new Location();
+            location.setName(node.get("name").asText());
+            JsonNode imagesNode = node.get("images");
+            Iterator<String> iterator = imagesNode.fieldNames();
+            iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
+            this.graph.addNode(location);
+            locations[i] = location;
+            i++;
+        }
+        System.out.println(Arrays.toString(locations));
+    }
+
+    private void initSupports(String path, ObjectMapper objectMapper) throws IOException {
+
     }
 }
