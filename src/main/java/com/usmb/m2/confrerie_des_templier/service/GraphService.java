@@ -27,6 +27,7 @@ public class GraphService {
             initGames(path, objectMapper);
             initTimeline(path, objectMapper);
             initLocations(path, objectMapper);
+            initSupports(path, objectMapper);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -112,16 +113,58 @@ public class GraphService {
         Node locationConcept = new Node("Locations");
         graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
-            JsonNode locationNodes = objectMapper.readTree(file);
-            for (JsonNode node : locationNodes) {
-                Location location = new Location();
-                location.setName(node.get("name").asText());
-                JsonNode imagesNode = node.get("images");
-                Iterator<String> iterator = imagesNode.fieldNames();
-                iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
-                this.graph.addNode(location);
-                new Edge(location, locationConcept, "is");
+        JsonNode locationNodes = objectMapper.readTree(file);
+        for (JsonNode node : locationNodes) {
+            Location location = new Location();
+            location.setName(node.get("name").asText());
+            JsonNode imagesNode = node.get("images");
+            Iterator<String> iterator = imagesNode.fieldNames();
+            iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
+            this.graph.addNode(location);
+            new Edge(location, locationConcept, "is");
+        }
+    }
+
+    private void initSupports(String path, ObjectMapper objectMapper) throws IOException {
+        Node supportConcept = new Node("Support de Jeu");
+        Node manufacturerConcept = new Node("Constructeur de console");
+        Node generationConcept = new Node("Génération onsoles de jeux vidéo");
+        graph.addNode(supportConcept);
+        graph.addNode(manufacturerConcept);
+        graph.addNode(generationConcept);
+        File file = new File(path + "supports.json");
+        JsonNode fileNodes = objectMapper.readTree(file);
+        JsonNode manufacturerNode = fileNodes.get("manufacturers");
+        for (JsonNode jsonNode : manufacturerNode) {
+            Node node = new Node(jsonNode.asText());
+            this.graph.addNode(node);
+            new Edge(node, manufacturerConcept, "is");
+        }
+        JsonNode generationNode = fileNodes.get("generations");
+        for (JsonNode jsonNode : generationNode) {
+            Node node = new Node(jsonNode.asText());
+            this.graph.addNode(node);
+            new Edge(node, supportConcept, "belongs to");
+            new Edge(node, generationConcept, "is");
+        }
+        JsonNode supportNodes = fileNodes.get("supports");
+        for (JsonNode jsonNode : supportNodes) {
+            Support node = new Support();
+            node.setName(jsonNode.get("name").asText());
+            node.setImg(jsonNode.get("img").asText());
+            if (jsonNode.has("date")) {
+                node.setDateSortie(jsonNode.get("date").asText());
             }
+            if (jsonNode.has("manufacturer")) {
+                new Edge(node, graph.searchNode(jsonNode.get("manufacturer").asText()).get(), "built by");
+            }
+            if (jsonNode.has("generation")) {
+                new Edge(node, graph.searchNode(jsonNode.get("generation").asText()).get(), "is part of");
+            } else {
+                new Edge(node, supportConcept, "is");
+            }
+            this.graph.addNode(node);
+        }
     }
 
     public GraphDTO getGraph(int maxDepth, int maxNodes) {

@@ -44,4 +44,11 @@ public class Node {
         json.put("name", this.name);
         return json;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "name='" + getName() + '\'' +
+                '}';
+    }
 }

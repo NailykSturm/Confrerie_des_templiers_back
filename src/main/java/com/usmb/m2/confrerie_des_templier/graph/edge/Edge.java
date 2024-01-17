@@ -7,7 +7,6 @@ public class Edge {
     private final String name;
     private final Node node1;
     private final Node node2;
-    public double weight = 1;
 
     public Edge(Node node1, Node node2, String name) {
         this.node1 = node1;
@@ -23,10 +22,6 @@ public class Edge {
 
     public Node getNode2() {
         return node2;
-    }
-
-    public double getWeight() {
-        return weight;
     }
 
     public String getName() {
