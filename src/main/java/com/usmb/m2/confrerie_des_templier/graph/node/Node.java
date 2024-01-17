@@ -7,8 +7,8 @@ import java.util.List;
 
 public abstract class Node {
     private String name;
-    private String[] aliases;
-    private List<Edge> edges;
+    //private String[] aliases;
+    private List<Edge> edges = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -18,14 +18,14 @@ public abstract class Node {
         this.name = name;
     }
 
-    public String[] getAliases() {
+/*    public String[] getAliases() {
         return aliases;
     }
 
     public void setAliases(String[] aliases) {
         this.aliases = aliases;
     }
-
+*/
     public List<Edge> getEdges() {
         return edges;
     }

@@ -1,8 +1,116 @@
-[
-  {
-    "name": "Assassin's Creed",
-    "aliases": ["assassins-creed", "AC"],
-    "date": "2007-11-13",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Assassin%E2%80%99s_Creed.svg"
-  }
-]
+{
+  "principale": [
+    {
+      "name": "Assassin's Creed",
+      "date": "2007-11-13",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Assassin%E2%80%99s_Creed.svg"
+    },
+    {
+      "name": "Assassin's Creed II",
+      "date": "2009-11-17",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/07/Assassin%E2%80%99s_Creed_II_v1_logo.svg"
+    },
+    {
+      "name": "Assassin's Creed Brotherhood",
+      "date": "2010-11-16",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Revelations",
+      "date": "2011-11-15",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed III",
+      "date": "2012-10-30",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed IV: Black Flag",
+      "date": "2013-10-29",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Rogue",
+      "date": "2014-11-11",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Unity",
+      "date": "2014-11-11",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Syndicate",
+      "date": "2015-10-23",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Origins",
+      "date": "2017-10-27",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Odyssey",
+      "date": "2018-10-05",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Valhalla",
+      "date": "2020-11-10",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Mirage",
+      "date": "2023-10-05",
+      "img": ""
+    }
+  ],
+  "spinOff": [
+    {
+      "name": "Assassin's Creed III Liberation",
+      "date": "2012-10-30",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Freedom Cry",
+      "date": "2013-12-17",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Chronicles: China",
+      "date": "2015-04-21",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Chronicles: India",
+      "date": "2016-01-12",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Chronicles: Russia",
+      "date": "2016-02-09",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Identity",
+      "date": "2016-02-25",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Rebellion",
+      "date": "2018-11-21",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Nexus",
+      "date": "2023-11-16",
+      "img": ""
+    },
+    {
+      "name": "Assassin's Creed Altaïr's Chronicles",
+      "date": "2008-02-05",
+      "img": ""
+    }
+  ]
+}

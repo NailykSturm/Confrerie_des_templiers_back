@@ -1,7 +1,9 @@
 package com.usmb.m2.confrerie_des_templier.service;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.usmb.m2.confrerie_des_templier.graph.Graph;
+import com.usmb.m2.confrerie_des_templier.graph.node.EGameType;
 import com.usmb.m2.confrerie_des_templier.graph.node.Game;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
@@ -20,8 +22,31 @@ public class GraphService {
             String path = "src/main/resources/";
             ObjectMapper objectMapper = new ObjectMapper();
             File file = new File(path + "game.json");
-            Game[] games = objectMapper.readValue(file, Game[].class);
-            //System.out.println(Arrays.toString(games));
+            JsonNode jsonNode = objectMapper.readTree(file);
+            JsonNode main = jsonNode.get("principale");
+            JsonNode spinOff = jsonNode.get("spinOff");
+            Game[] games = new Game[main.size() + spinOff.size()];
+            int i = 0;
+            for (JsonNode node : main) {
+                Game game = new Game();
+                game.setName(node.get("name").asText());
+                game.setDate(node.get("date").asText());
+                game.setImg(node.get("img").asText());
+                game.setType(EGameType.Principale);
+                games[i] = game;
+                i++;
+            }
+            for (JsonNode node : spinOff) {
+                Game game = new Game();
+                game.setName(node.get("name").asText());
+                game.setDate(node.get("date").asText());
+                game.setImg(node.get("img").asText());
+                game.setType(EGameType.SpinOff);
+                games[i] = game;
+                i++;
+            }
+
+            System.out.println(Arrays.toString(games));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

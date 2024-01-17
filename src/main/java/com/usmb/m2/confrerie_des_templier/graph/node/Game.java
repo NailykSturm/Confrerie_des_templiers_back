@@ -1,18 +1,25 @@
 package com.usmb.m2.confrerie_des_templier.graph.node;
 
-import java.util.Arrays;
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Game extends Node {
-    private Date date;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate date;
     private String img;
 
-    public Date getDate() {
+    @JsonIgnore
+    private EGameType type;
+
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.date = LocalDate.parse(date);
     }
 
     public String getImg() {
@@ -23,13 +30,21 @@ public class Game extends Node {
         this.img = img;
     }
 
+    public EGameType getType() {
+        return type;
+    }
+
+    public void setType(EGameType type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
                 "name='" + getName() + '\'' +
-                ", aliases=" + Arrays.toString(getAliases()) +
-                ", date=" + date +
+                ", date=" + date.format(DateTimeFormatter.ISO_DATE) +
                 ", img='" + img + '\'' +
+                ", type=" + type +
                 '}';
     }
 }
