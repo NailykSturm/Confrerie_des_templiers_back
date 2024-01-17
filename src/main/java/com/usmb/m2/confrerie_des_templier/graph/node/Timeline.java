@@ -1,6 +1,5 @@
 package com.usmb.m2.confrerie_des_templier.graph.node;
 
-import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Timeline extends Node{

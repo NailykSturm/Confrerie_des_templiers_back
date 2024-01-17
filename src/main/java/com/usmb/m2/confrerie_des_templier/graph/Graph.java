@@ -8,10 +8,14 @@ import com.usmb.m2.confrerie_des_templier.graph.node.Node;
 import java.util.*;
 
 public class Graph {
-    private List<Node> nodes = new ArrayList<>();
+    private Map<String, Node> nodes = new HashMap<String, Node>();
 
     public void addNode(Node node) {
-        nodes.add(node);
+        nodes.put(node.getName(), node);
+    }
+
+    public Optional<Node> searchNode(String name) {
+        return Optional.ofNullable(nodes.getOrDefault(name , null));
     }
 
     @Override
@@ -25,7 +29,7 @@ public class Graph {
         System.out.println(nodes.size());
         Set<Node> nodeSet = new HashSet<>();
         Set<Edge> edgeSet = new HashSet<>();
-        Node start = nodes.getFirst();
+        Node start = nodes.get("Game");
         nodeSet.add(start);
         addNeighboursRec(start, nodeSet, edgeSet, maxDepth, maxNodes);
         List<HashMap<String, Object>> nodes = new ArrayList<>();
