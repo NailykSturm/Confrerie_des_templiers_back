@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Japon",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/6/62/Japan_%28orthographic_projection%29.svg"
+        }
+    },
+    {
+        "name": "France",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/a/a4/EU-France_%28orthographic_projection%29.svg"
+        }
+    },
+    {
+        "name": "Italie",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/b/ba/EU-Italy.svg"
+        }
+    },
+    {
+        "name": "Norvège",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/0/01/Europe-Norway.svg"
+        }
+    },
+    {
+        "name": "Caraïbes",
+        "images": {
+            "map": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Map_of_the_Caribbean_%28fr%29.png",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/8/88/Caribbean-4.png"
+        }
+    },
+    {
+        "name": "Palestine",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/a/ad/State_of_Palestine_%28orthographic_projection%29.svg"
+        }
+    },
+    {
+        "name": "Grèce",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/2/21/EU-Greece.svg"
+        }
+    },
+    {
+        "name": "Égypte",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/a/a1/EGY_orthographic.svg"
+        }
+    },
+    {
+        "name": "Royaume-Uni",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/0/07/United_Kingdom_%28orthographic_projection%29.svg"
+        }
+    },
+    {
+        "name": "Chine",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/a/a4/CHN_orthographic.svg"
+        }
+    },
+    {
+        "name": "Inde",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/b/bb/India_%28orthographic_projection%29.svg"
+        }
+    },
+    {
+        "name": "Russie",
+        "images": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg",
+            "location": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Russian_Federation_%28orthographic_projection%29_-_Annexed_Territories_disputed.svg"
+        }
+    }
+]

@@ -5,12 +5,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.usmb.m2.confrerie_des_templier.graph.Graph;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import com.usmb.m2.confrerie_des_templier.graph.node.*;
+
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -25,6 +25,7 @@ public class GraphService {
             ObjectMapper objectMapper = new ObjectMapper();
             this.initGames(path, objectMapper);
             initTimeline(path, objectMapper);
+            this.initLocations(path, objectMapper);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -35,8 +36,6 @@ public class GraphService {
         JsonNode jsonNode = objectMapper.readTree(file);
         JsonNode main = jsonNode.get("principale");
         JsonNode spinOff = jsonNode.get("spinOff");
-        Game[] games = new Game[main.size() + spinOff.size()];
-        int i = 0;
         for (JsonNode node : main) {
             Game game = new Game();
             game.setName(node.get("name").asText());
@@ -44,8 +43,6 @@ public class GraphService {
             game.setImg(node.get("img").asText());
             game.setType(EGameType.Principale);
             this.graph.addNode(game);
-            games[i] = game;
-            i++;
         }
         for (JsonNode node : spinOff) {
             Game game = new Game();
@@ -54,11 +51,7 @@ public class GraphService {
             game.setImg(node.get("img").asText());
             game.setType(EGameType.SpinOff);
             this.graph.addNode(game);
-            games[i] = game;
-            i++;
         }
-
-        System.out.println(Arrays.toString(games));
     }
 
     private void initTimeline(String path, ObjectMapper objectMapper) throws IOException {
@@ -99,5 +92,18 @@ public class GraphService {
                 }
             }
         }
+    }
+
+    private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
+        File file = new File(path + "locations.json");
+            JsonNode locationNodes = objectMapper.readTree(file);
+            for (JsonNode node : locationNodes) {
+                Location location = new Location();
+                location.setName(node.get("name").asText());
+                JsonNode imagesNode = node.get("images");
+                Iterator<String> iterator = imagesNode.fieldNames();
+                iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
+                this.graph.addNode(location);
+            }
     }
 }
