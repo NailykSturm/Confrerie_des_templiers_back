@@ -29,7 +29,7 @@ public class Graph {
         System.out.println(nodes.size());
         Set<Node> nodeSet = new HashSet<>();
         Set<Edge> edgeSet = new HashSet<>();
-        Node start = nodes.getFirst();
+        Node start = nodes.get("Game");
         nodeSet.add(start);
         addNeighboursRec(start, nodeSet, edgeSet, maxDepth, maxNodes);
         List<HashMap<String, Object>> nodes = new ArrayList<>();
