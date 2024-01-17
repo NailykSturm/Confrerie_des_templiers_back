@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 public class Game extends Node {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
@@ -46,5 +47,13 @@ public class Game extends Node {
                 ", img='" + img + '\'' +
                 ", type=" + type +
                 '}';
+    }
+
+    @Override
+    public HashMap<String, Object> toJson() {
+        HashMap<String, Object> json = super.toJson();
+        json.put("date", this.date.format(DateTimeFormatter.ISO_DATE));
+        json.put("img", this.img);
+        return json;
     }
 }

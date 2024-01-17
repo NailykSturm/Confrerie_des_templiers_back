@@ -3,11 +3,24 @@ package com.usmb.m2.confrerie_des_templier.graph.node;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public abstract class Node {
+public class Node {
+    private static int idCounter = 0;
+    private final int id = idCounter++;
     private String name;
     private List<Edge> edges = new ArrayList<>();
+
+    public Node() {}
+
+    public Node(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
@@ -23,5 +36,12 @@ public abstract class Node {
 
     public void addEdge(Edge edge) {
         this.edges.add(edge);
+    }
+
+    public HashMap<String, Object> toJson() {
+        HashMap<String, Object> json = new HashMap<>();
+        json.put("id", id);
+        json.put("name", this.name);
+        return json;
     }
 }
