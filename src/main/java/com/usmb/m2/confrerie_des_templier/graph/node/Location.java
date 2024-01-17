@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Location extends Node {
-    private Map<String, String> images = new HashMap<String, String>();
+    private final Map<String, String> images = new HashMap<>();
 
     public void addImage(String label, String imgUri) {
         this.images.put(label, imgUri);
@@ -16,14 +16,21 @@ public class Location extends Node {
 
     @Override
     public String toString() {
-        String locString = "Location{" +
-        "name='" + getName() + '\'' +
-        ", images= {";
+        StringBuilder locString = new StringBuilder("Location{" +
+                "name='" + getName() + '\'' +
+                ", images= {");
         for ( Map.Entry<String, String> entry : this.images.entrySet() ) {
-            locString += entry.getKey() + "='" + entry.getValue() + "',";
+            locString.append(entry.getKey()).append("='").append(entry.getValue()).append("',");
         }
-        locString = locString.substring(0, locString.length() - 1);
-        locString += "}}";
-        return locString;
+        locString = new StringBuilder(locString.substring(0, locString.length() - 1));
+        locString.append("}}");
+        return locString.toString();
+    }
+
+    @Override
+    public HashMap<String, Object> toJson() {
+        HashMap<String, Object> json = super.toJson();
+        json.put("images", this.images);
+        return json;
     }
 }

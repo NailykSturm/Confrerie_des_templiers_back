@@ -1,6 +1,7 @@
 package com.usmb.m2.confrerie_des_templier.graph.node;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 
 public class Timeline extends Node{
     private int begin;
@@ -39,5 +40,13 @@ public class Timeline extends Node{
                 ", end=" + end +
                 ", type=" + type +
                 '}';
+    }
+
+    @Override
+    public HashMap<String, Object> toJson() {
+        HashMap<String, Object> json = super.toJson();
+        json.put("begin", this.begin);
+        json.put("end", this.end);
+        return json;
     }
 }

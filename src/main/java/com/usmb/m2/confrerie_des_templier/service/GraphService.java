@@ -2,6 +2,7 @@ package com.usmb.m2.confrerie_des_templier.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.usmb.m2.confrerie_des_templier.GraphDTO;
 import com.usmb.m2.confrerie_des_templier.graph.Graph;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import com.usmb.m2.confrerie_des_templier.graph.node.*;
@@ -23,15 +24,26 @@ public class GraphService {
         try {
             String path = "src/main/resources/";
             ObjectMapper objectMapper = new ObjectMapper();
-            this.initGames(path, objectMapper);
+            initGames(path, objectMapper);
             initTimeline(path, objectMapper);
-            this.initLocations(path, objectMapper);
+            initLocations(path, objectMapper);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     private void initGames(String path, ObjectMapper objectMapper) throws IOException {
+        Node gameConcept = new Node("Games");
+        graph.addNode(gameConcept);
+
+        Node spinOffConcept = new Node("SpinOff");
+        graph.addNode(spinOffConcept);
+        new Edge(spinOffConcept, gameConcept, "is");
+
+        Node principale = new Node("Principale");
+        graph.addNode(principale);
+        new Edge(principale, gameConcept, "is");
+
         File file = new File(path + "game.json");
         JsonNode jsonNode = objectMapper.readTree(file);
         JsonNode main = jsonNode.get("principale");
@@ -42,7 +54,8 @@ public class GraphService {
             game.setDate(node.get("date").asText());
             game.setImg(node.get("img").asText());
             game.setType(EGameType.Principale);
-            this.graph.addNode(game);
+            graph.addNode(game);
+            new Edge(game, principale, "is");
         }
         for (JsonNode node : spinOff) {
             Game game = new Game();
@@ -50,7 +63,8 @@ public class GraphService {
             game.setDate(node.get("date").asText());
             game.setImg(node.get("img").asText());
             game.setType(EGameType.SpinOff);
-            this.graph.addNode(game);
+            graph.addNode(game);
+            new Edge(game, spinOffConcept, "is");
         }
     }
 
@@ -95,6 +109,8 @@ public class GraphService {
     }
 
     private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
+        Node locationConcept = new Node("Locations");
+        graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
             JsonNode locationNodes = objectMapper.readTree(file);
             for (JsonNode node : locationNodes) {
@@ -104,6 +120,11 @@ public class GraphService {
                 Iterator<String> iterator = imagesNode.fieldNames();
                 iterator.forEachRemaining(e -> location.addImage(e, imagesNode.get(e).asText()));
                 this.graph.addNode(location);
+                new Edge(location, locationConcept, "is");
             }
+    }
+
+    public GraphDTO getGraph(int maxDepth, int maxNodes) {
+        return this.graph.getGraph(maxDepth, maxNodes);
     }
 }

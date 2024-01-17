@@ -1,12 +1,13 @@
 package com.usmb.m2.confrerie_des_templier.graph.edge;
 
+import com.usmb.m2.confrerie_des_templier.EdgeDTO;
 import com.usmb.m2.confrerie_des_templier.graph.node.Node;
 
 public class Edge {
     private final String name;
     private final Node node1;
     private final Node node2;
-    private double weight = 1;
+    public double weight = 1;
 
     public Edge(Node node1, Node node2, String name) {
         this.node1 = node1;
@@ -40,5 +41,9 @@ public class Edge {
         } else {
             return null;
         }
+    }
+
+    public EdgeDTO toDTO() {
+        return new EdgeDTO(node1.getId(), node2.getId(), name);
     }
 }
