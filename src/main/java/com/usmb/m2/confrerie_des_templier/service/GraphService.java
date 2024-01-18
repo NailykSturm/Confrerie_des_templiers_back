@@ -56,7 +56,6 @@ public class GraphService {
             game.setName(node.get("name").asText());
             game.setDate(node.get("date").asText());
             game.setImg(node.get("img").asText());
-            game.setType(EGameType.Principale);
             graph.addNode(game);
             new Edge(game, principale, "is");
         }
@@ -65,7 +64,6 @@ public class GraphService {
             game.setName(node.get("name").asText());
             game.setDate(node.get("date").asText());
             game.setImg(node.get("img").asText());
-            game.setType(EGameType.SpinOff);
             graph.addNode(game);
             new Edge(game, spinOffConcept, "is");
         }
@@ -91,19 +89,18 @@ public class GraphService {
         JsonNode jsonNode = objectMapper.readTree(file);
         for (Iterator<Map.Entry<String, JsonNode>> it = jsonNode.fields(); it.hasNext(); ) {
             Map.Entry<String, JsonNode> nodes = it.next();
-            ETimelineType type = ETimelineType.valueOf(nodes.getKey());
+            String type = nodes.getKey();
             for (JsonNode node : nodes.getValue()) {
                 Timeline t = objectMapper.treeToValue(node, Timeline.class);
-                t.setType(type);
                 graph.addNode(t);
                 switch (type) {
-                    case Present:
+                    case "Present":
                         new Edge(t, present, "is");
                         break;
-                    case Past:
+                    case "Past":
                         new Edge(t, past, "is");
                         break;
-                    case Isu:
+                    case "Isu":
                         new Edge(t, isu, "is");
                         break;
                 }

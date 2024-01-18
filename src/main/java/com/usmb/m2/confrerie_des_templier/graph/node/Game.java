@@ -12,9 +12,6 @@ public class Game extends Node {
     private LocalDate date;
     private String img;
 
-    @JsonIgnore
-    private EGameType type;
-
     public LocalDate getDate() {
         return date;
     }
@@ -31,21 +28,12 @@ public class Game extends Node {
         this.img = img;
     }
 
-    public EGameType getType() {
-        return type;
-    }
-
-    public void setType(EGameType type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "Game{" +
                 "name='" + getName() + '\'' +
                 ", date=" + date.format(DateTimeFormatter.ISO_DATE) +
                 ", img='" + img + '\'' +
-                ", type=" + type +
                 '}';
     }
 
@@ -54,7 +42,6 @@ public class Game extends Node {
         HashMap<String, Object> json = super.toJson();
         json.put("date", this.date.format(DateTimeFormatter.ISO_DATE));
         json.put("img", this.img);
-        json.put("type", "Game");
         return json;
     }
 }

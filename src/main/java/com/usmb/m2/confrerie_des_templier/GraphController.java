@@ -19,7 +19,7 @@ public class GraphController {
 
     @GetMapping
     public GraphDTO getGraph() {
-        return graphService.getGraph("Game", MAX_DEPTH);
+        return graphService.getGraph("Assassin's Creed", MAX_DEPTH);
     }
 
     @GetMapping("/{start}")

@@ -31,7 +31,6 @@ public class Location extends Node {
     public HashMap<String, Object> toJson() {
         HashMap<String, Object> json = super.toJson();
         json.put("images", this.images);
-        json.put("type", "Location");
         return json;
     }
 }

@@ -45,8 +45,31 @@ public abstract class Node {
         HashMap<String, Object> json = new HashMap<>();
         json.put("id", id);
         json.put("name", this.name);
-        json.put("type", "Node");
+        json.put("type", getType());
         return json;
+    }
+
+    public List<Edge> findEdgesByName(String name) {
+        List<Edge> edges = new ArrayList<>();
+        for ( Edge edge : this.edges ) {
+            if ( edge.name().equals(name) ) {
+                edges.add(edge);
+            }
+        }
+        return edges;
+    }
+
+    public String getType() {
+        if ( isConcept() ) {
+            return "Concept";
+        }
+        List<Edge> edges = findEdgesByName("is");
+        for ( Edge edge : edges ) {
+            if ( edge.getOtherNode(this) == edge.node2()) {
+                return edge.getOtherNode(this).getName();
+            }
+        }
+        return "Concept";
     }
 
     @Override

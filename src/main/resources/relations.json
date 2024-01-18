@@ -13,5 +13,20 @@
     "node1" : "Assassin's Creed Brotherhood",
     "node2" : "Assassin's Creed Revelations",
     "name" : "suite"
+  },
+  {
+    "node1" : "Assassin's Creed Mirage",
+    "node2" : "Assassin's Creed Valhalla",
+    "name" : "prequel"
+  },
+  {
+    "node1" : "Assassin's Creed III Liberation",
+    "node2" : "Assassin's Creed III",
+    "name" : "spin-off"
+  },
+  {
+    "node1" : "Assassin's Creed Freedom Cry",
+    "node2" : "Assassin's Creed IV Black Flag",
+    "name" : "suite"
   }
 ]
