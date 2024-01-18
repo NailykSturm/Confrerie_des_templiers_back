@@ -34,14 +34,14 @@ public class GraphService {
     }
 
     private void initGames(String path, ObjectMapper objectMapper) throws IOException {
-        Node gameConcept = new Node("Games");
+        Node gameConcept = new Concept("Game");
         graph.addNode(gameConcept);
 
-        Node spinOffConcept = new Node("SpinOff");
+        Node spinOffConcept = new Concept("SpinOff");
         graph.addNode(spinOffConcept);
         new Edge(spinOffConcept, gameConcept, "is");
 
-        Node principale = new Node("Principale");
+        Node principale = new Concept("Principale");
         graph.addNode(principale);
         new Edge(principale, gameConcept, "is");
 
@@ -70,18 +70,18 @@ public class GraphService {
     }
 
     private void initTimeline(String path, ObjectMapper objectMapper) throws IOException {
-        Node timeline = new Node("Timeline");
+        Node timeline = new Concept("Timeline");
         graph.addNode(timeline);
 
-        Node present = new Node("Present");
+        Node present = new Concept("Present");
         graph.addNode(present);
         new Edge(present, timeline, "is");
 
-        Node past = new Node("Past");
+        Node past = new Concept("Past");
         graph.addNode(past);
         new Edge(past, timeline, "is");
 
-        Node isu = new Node("Isu");
+        Node isu = new Concept("Isu");
         graph.addNode(isu);
         new Edge(isu, timeline, "is");
 
@@ -110,7 +110,7 @@ public class GraphService {
     }
 
     private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
-        Node locationConcept = new Node("Locations");
+        Node locationConcept = new Concept("Locations");
         graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
         JsonNode locationNodes = objectMapper.readTree(file);
@@ -126,9 +126,9 @@ public class GraphService {
     }
 
     private void initSupports(String path, ObjectMapper objectMapper) throws IOException {
-        Node supportConcept = new Node("Support de Jeu");
-        Node manufacturerConcept = new Node("Constructeur de console");
-        Node generationConcept = new Node("Génération onsoles de jeux vidéo");
+        Node supportConcept = new Concept("Support de Jeu");
+        Node manufacturerConcept = new Concept("Constructeur de console");
+        Node generationConcept = new Concept("Génération consoles de jeux vidéo");
         graph.addNode(supportConcept);
         graph.addNode(manufacturerConcept);
         graph.addNode(generationConcept);
@@ -136,13 +136,13 @@ public class GraphService {
         JsonNode fileNodes = objectMapper.readTree(file);
         JsonNode manufacturerNode = fileNodes.get("manufacturers");
         for (JsonNode jsonNode : manufacturerNode) {
-            Node node = new Node(jsonNode.asText());
+            Node node = new Concept(jsonNode.asText());
             this.graph.addNode(node);
             new Edge(node, manufacturerConcept, "is");
         }
         JsonNode generationNode = fileNodes.get("generations");
         for (JsonNode jsonNode : generationNode) {
-            Node node = new Node(jsonNode.asText());
+            Node node = new Concept(jsonNode.asText());
             this.graph.addNode(node);
             new Edge(node, supportConcept, "belongs to");
             new Edge(node, generationConcept, "is");
@@ -167,7 +167,7 @@ public class GraphService {
         }
     }
 
-    public GraphDTO getGraph(int maxDepth, int maxNodes) {
-        return this.graph.getGraph(maxDepth, maxNodes);
+    public GraphDTO getGraph(String name, int maxDepth) {
+        return this.graph.makeSubGraph(name, maxDepth);
     }
 }

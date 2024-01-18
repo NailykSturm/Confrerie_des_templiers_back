@@ -30,6 +30,7 @@ public class Support extends Node {
         HashMap<String, Object> json = super.toJson();
         json.put("date", this.dateSortie.format(DateTimeFormatter.ISO_DATE));
         json.put("img", this.img);
+        json.put("type", "Support");
         return json;
     }
 }

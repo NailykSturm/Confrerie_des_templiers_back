@@ -18,7 +18,7 @@ public class GraphController {
 
     @GetMapping
     public GraphDTO getGraph() {
-        return graphService.getGraph(MAX_DEPTH, MAX_NODES);
+        return graphService.getGraph("Game", MAX_DEPTH);
     }
 
 

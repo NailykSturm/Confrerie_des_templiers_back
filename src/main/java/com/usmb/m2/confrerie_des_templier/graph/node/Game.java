@@ -54,6 +54,7 @@ public class Game extends Node {
         HashMap<String, Object> json = super.toJson();
         json.put("date", this.date.format(DateTimeFormatter.ISO_DATE));
         json.put("img", this.img);
+        json.put("type", "Game");
         return json;
     }
 }

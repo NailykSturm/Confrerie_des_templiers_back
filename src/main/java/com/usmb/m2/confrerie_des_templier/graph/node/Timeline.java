@@ -46,6 +46,7 @@ public class Timeline extends Node{
         HashMap<String, Object> json = super.toJson();
         json.put("begin", this.begin);
         json.put("end", this.end);
+        json.put("type", "Timeline");
         return json;
     }
 }
