@@ -1,11 +1,32 @@
-{
-  "Past": [
-    {
-      "name": "Grèce Antique",
-      "begin": "-1200",
-      "end": "-31"
-    }
-  ],
-  "Present": [],
-  "Isu": []
-}
+[
+  {
+    "name": "Grèce Antique",
+    "begin": "-1200",
+    "end": "-31"
+  },
+  {
+    "name": "Isu",
+    "begin": "-77986",
+    "end": "-74000"
+  },
+  {
+    "name": "Troisième Croisade",
+    "begin": "1189",
+    "end": "1192"
+  },
+  {
+    "name": "Révolution Française",
+    "begin": "1789",
+    "end": "1799"
+  },
+  {
+    "name": "Âge des Vikings",
+    "begin": "793",
+    "end": "1066"
+  },
+  {
+    "name": "Égypte antique",
+    "begin": "-3150",
+    "end": "-30"
+  }
+]

@@ -53,5 +53,60 @@
     "node1" : "Assassin's Creed IV Black Flag",
     "node2" : "Caraïbes",
     "name" : "à"
+  },
+  {
+    "node1" : "Assassin's Creed",
+    "node2" : "PlayStation 3",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed",
+    "node2" : "Xbox 360",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed",
+    "node2" : "Ordinateur personnel",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed Mirage",
+    "node2" : "PlayStation 4",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed Mirage",
+    "node2" : "PlayStation 5",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed Mirage",
+    "node2" : "Xbox One",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed Mirage",
+    "node2" : "Xbox Series",
+    "name" : "sur"
+  },
+  {
+    "node1" : "Assassin's Creed Odyssey",
+    "node2" : "Grèce Antique",
+    "name" : "pendant"
+  },
+  {
+    "node1" : "Assassin's Creed",
+    "node2" : "Troisième Croisade",
+    "name" : "pendant"
+  },
+  {
+    "node1" : "Assassin's Creed Valhalla",
+    "node2" : "Âge des Vikings",
+    "name" : "pendant"
+  },
+  {
+    "node1" : "Assassin's Creed Origins",
+    "node2" : "Égypte Antique",
+    "name" : "pendant"
   }
 ]
