@@ -28,5 +28,30 @@
     "node1" : "Assassin's Creed Freedom Cry",
     "node2" : "Assassin's Creed IV Black Flag",
     "name" : "suite"
+  },
+  {
+    "node1" : "Assassin's Creed",
+    "node2" : "Palestine",
+    "name" : "à"
+  },
+  {
+    "node1" : "Assassin's Creed II",
+    "node2" : "Italie",
+    "name" : "à"
+  },
+  {
+    "node1" : "Assassin's Creed Brotherhood",
+    "node2" : "Italie",
+    "name" : "à"
+  },
+  {
+    "node1" : "Assassin's Creed Revelations",
+    "node2" : "Italie",
+    "name" : "à"
+  },
+  {
+    "node1" : "Assassin's Creed IV Black Flag",
+    "node2" : "Caraïbes",
+    "name" : "à"
   }
 ]

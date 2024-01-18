@@ -24,7 +24,7 @@ public class GraphController {
 
     @GetMapping("/{start}")
     public GraphDTO getGraphFromStart(@PathVariable(name = "start") String start) {
-        return graphService.getGraph(start, MAX_DEPTH);
+        return graphService.getGraph(start.replace('_', ' '), MAX_DEPTH);
     }
 
 

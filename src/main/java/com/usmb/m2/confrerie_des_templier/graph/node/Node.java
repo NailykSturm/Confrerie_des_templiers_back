@@ -66,7 +66,7 @@ public abstract class Node {
         List<Edge> edges = findEdgesByName("is");
         for ( Edge edge : edges ) {
             if ( edge.getOtherNode(this) == edge.node2()) {
-                return edge.getOtherNode(this).getName();
+                return edge.getOtherNode(this).getName().replace(" ", "");
             }
         }
         return "Concept";

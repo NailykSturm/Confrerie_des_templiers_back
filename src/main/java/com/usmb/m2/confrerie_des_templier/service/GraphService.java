@@ -36,14 +36,14 @@ public class GraphService {
     }
 
     private void initGames(String path, ObjectMapper objectMapper) throws IOException {
-        Node gameConcept = new Concept("Game");
+        Node gameConcept = new Concept("Jeu vidéo");
         graph.addNode(gameConcept);
 
         Node spinOffConcept = new Concept("SpinOff");
         graph.addNode(spinOffConcept);
         new Edge(spinOffConcept, gameConcept, "is");
 
-        Node principale = new Concept("Principale");
+        Node principale = new Concept("Jeu Principal");
         graph.addNode(principale);
         new Edge(principale, gameConcept, "is");
 
@@ -70,14 +70,14 @@ public class GraphService {
     }
 
     private void initTimeline(String path, ObjectMapper objectMapper) throws IOException {
-        Node timeline = new Concept("Timeline");
+        Node timeline = new Concept("Chronologie");
         graph.addNode(timeline);
 
         Node present = new Concept("Present");
         graph.addNode(present);
         new Edge(present, timeline, "is");
 
-        Node past = new Concept("Past");
+        Node past = new Concept("Passé");
         graph.addNode(past);
         new Edge(past, timeline, "is");
 
@@ -109,7 +109,7 @@ public class GraphService {
     }
 
     private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
-        Node locationConcept = new Concept("Location");
+        Node locationConcept = new Concept("Localisation");
         graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
         JsonNode locationNodes = objectMapper.readTree(file);
