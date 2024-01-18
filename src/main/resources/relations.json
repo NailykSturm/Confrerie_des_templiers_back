@@ -1,0 +1,17 @@
+[
+  {
+    "node1" : "Assassin's Creed II",
+    "node2" : "Assassin's Creed Brotherhood",
+    "name" : "suite"
+  },
+  {
+    "node1" : "Assassin's Creed II",
+    "node2" : "Assassin's Creed Revelations",
+    "name" : "suite"
+  },
+  {
+    "node1" : "Assassin's Creed Brotherhood",
+    "node2" : "Assassin's Creed Revelations",
+    "name" : "suite"
+  }
+]

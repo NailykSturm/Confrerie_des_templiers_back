@@ -25,47 +25,12 @@ public class Graph {
                 '}';
     }
 
-    public GraphDTO getGraph(int maxDepth, int maxNodes) {
-        System.out.println(nodes.size());
-        Set<Node> nodeSet = new HashSet<>();
-        Set<Edge> edgeSet = new HashSet<>();
-        Node start = nodes.get("Game");
-        nodeSet.add(start);
-        addNeighboursRec(start, nodeSet, edgeSet, maxDepth, maxNodes);
-        List<HashMap<String, Object>> nodes = new ArrayList<>();
-        List<EdgeDTO> edges = new ArrayList<>();
-        for (Node node : nodeSet) {
-            nodes.add(node.toJson());
-        }
-        for (Edge edge : edgeSet) {
-            edges.add(edge.toDTO());
-        }
-        return new GraphDTO(nodes, edges);
-    }
-
-    private void addNeighboursRec(Node start, Set<Node> nodeSet, Set<Edge> edgeSet, int depth, int maxNodes) {
-        if (depth == 0 || nodeSet.size() >= maxNodes) {
-            return;
-        }
-        for (Edge edge : start.getEdges()) {
-            if (nodeSet.size() >= maxNodes) {
-                return;
-            }
-            Node neighbour = edge.getOtherNode(start);
-            nodeSet.add(neighbour);
-            for (Edge e : neighbour.getEdges()) {
-                if (edgeSet.add(e)) {
-                    addNeighboursRec(neighbour, nodeSet, edgeSet, depth - 1, maxNodes);
-                }
-            }
-        }
-    }
-
     public GraphDTO makeSubGraph(String name, int maxDepth) {
         Node start = nodes.get(name);
         HashMap<Node, Integer> nodeMap = new HashMap<>();
         addNodeRec(start, nodeMap, maxDepth);
         List<HashMap<String, Object>> nodes = new ArrayList<>();
+        nodes.add(start.toJson());
         List<EdgeDTO> edges = new ArrayList<>();
         int max = 0;
         for (Integer value : nodeMap.values()) {

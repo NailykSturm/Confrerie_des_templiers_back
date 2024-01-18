@@ -28,7 +28,8 @@ public class Support extends Node {
     @Override
     public HashMap<String, Object> toJson() {
         HashMap<String, Object> json = super.toJson();
-        json.put("date", this.dateSortie.format(DateTimeFormatter.ISO_DATE));
+        if (this.dateSortie != null)
+            json.put("date", this.dateSortie.format(DateTimeFormatter.ISO_DATE));
         json.put("img", this.img);
         json.put("type", "Support");
         return json;

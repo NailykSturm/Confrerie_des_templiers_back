@@ -2,6 +2,7 @@ package com.usmb.m2.confrerie_des_templier;
 
 import com.usmb.m2.confrerie_des_templier.service.GraphService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,11 @@ public class GraphController {
     @GetMapping
     public GraphDTO getGraph() {
         return graphService.getGraph("Game", MAX_DEPTH);
+    }
+
+    @GetMapping("/{start}")
+    public GraphDTO getGraphFromStart(@PathVariable(name = "start") String start) {
+        return graphService.getGraph(start, MAX_DEPTH);
     }
 
 

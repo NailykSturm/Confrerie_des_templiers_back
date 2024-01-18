@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class GraphService {
@@ -28,6 +29,7 @@ public class GraphService {
             initTimeline(path, objectMapper);
             initLocations(path, objectMapper);
             initSupports(path, objectMapper);
+            initRelations(path, objectMapper);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -45,7 +47,7 @@ public class GraphService {
         graph.addNode(principale);
         new Edge(principale, gameConcept, "is");
 
-        File file = new File(path + "game.json");
+        File file = new File(path + "games.json");
         JsonNode jsonNode = objectMapper.readTree(file);
         JsonNode main = jsonNode.get("principale");
         JsonNode spinOff = jsonNode.get("spinOff");
@@ -110,7 +112,7 @@ public class GraphService {
     }
 
     private void initLocations(String path, ObjectMapper objectMapper) throws IOException {
-        Node locationConcept = new Concept("Locations");
+        Node locationConcept = new Concept("Location");
         graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
         JsonNode locationNodes = objectMapper.readTree(file);
@@ -126,9 +128,9 @@ public class GraphService {
     }
 
     private void initSupports(String path, ObjectMapper objectMapper) throws IOException {
-        Node supportConcept = new Concept("Support de Jeu");
-        Node manufacturerConcept = new Concept("Constructeur de console");
-        Node generationConcept = new Concept("Génération consoles de jeux vidéo");
+        Node supportConcept = new Concept("Support");
+        Node manufacturerConcept = new Concept("Constructeur");
+        Node generationConcept = new Concept("Génération");
         graph.addNode(supportConcept);
         graph.addNode(manufacturerConcept);
         graph.addNode(generationConcept);
@@ -164,6 +166,24 @@ public class GraphService {
                 new Edge(node, supportConcept, "is");
             }
             this.graph.addNode(node);
+        }
+    }
+
+    private void initRelations(String path, ObjectMapper objectMapper) throws IOException {
+        File file = new File(path + "relations.json");
+        JsonNode fileNodes = objectMapper.readTree(file);
+        for (JsonNode jsonNode : fileNodes) {
+            Optional<Node> opt = this.graph.searchNode(jsonNode.get("node1").asText());
+            if (opt.isEmpty()) {
+                throw new RuntimeException("Node not found");
+            }
+            Node node1 = opt.get();
+            opt = this.graph.searchNode(jsonNode.get("node2").asText());
+            if (opt.isEmpty()) {
+                throw new RuntimeException("Node not found");
+            }
+            Node node2 = opt.get();
+            new Edge(node1, node2, jsonNode.get("name").asText());
         }
     }
 
