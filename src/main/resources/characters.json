@@ -1,0 +1,105 @@
+{
+    "type": ["Personnage Historique", "Personnage Principal", "Personnage Secondaire"],
+    "factions": [
+        {
+            "name": "Ceux qu'on ne voit pas",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/12/ACO_Insigne_Assassins_%C3%A9gyptiens.png/revision/latest/scale-to-width-down/1000?cb=20170614234327&path-prefix=fr",
+            "description": "Ceux qu'on ne voit pas était la première incarnation connue de la Confrérie des Assassins. Fondée en Égypte par le Medjaÿ Bayek de Siwa et son épouse, Aya d'Alexandrie en 47 avant notre ère, Ceux qu'on ne voit pas avaient pour principe de travailler dans l'ombre pour protéger le peuple de l'oppression et de l'injustice, afin de sauvegarder leur libre arbitre.\n\nLa création de cette faction était une réponse directe à l'Ordre des Anciens, un réseau très étendu et encore plus discret d'autocrates et de partisans de la suprématie des Isu. Inspiré par toutes les souffrances dont il fut témoin au long de ses activités passées en tant que Medjaÿ, Bayek conçut le Credo qui servirait de base à la philosophie des Assassins. Aya quant à elle, se rebaptisa Amunet, et permit à Ceux qu'on ne voit pas de s'étendre par delà les frontières de l'Égypte en établissant un réseau opérationnel à Rome. À eux deux, ils œuvrèrent dans l'ombre dans le but de dévoiler et saper le travail de l'Ordre, ainsi que d'en éliminer les membres lorsque l'occasion s'en présentait."
+        },
+        {
+            "name": "Confrérie des Assassins",
+            "img": "https://wallpapercave.com/wp/y0qMAF3.png",
+            "description": "La Confrérie des Assassins, également appelée Ordre des Assassins, Ceux qu'on ne voit pas depuis l'Égypte antique ou Hashashins au Moyen Âge, est une organisation secrète mondiale composée d'assassins ennemis jurés des Templiers, contre lesquels ils mènent dans l'ombre une guerre éternelle, des origines de l'humanité à nos jours. Alors que les Templiers cherchent à sauver l'humanité en contrôlant son libre arbitre, la Confrérie des Assassins lutte pour la survie de la liberté, qui favorise la propagation de nouvelles idées et le développement de chaque individu.\n\nBien que la Confrérie en elle-même ait été fondée par Bayek de Siwa et sa femme, Amunet en 47 avant notre ère, l'idéologie des Assassins existe depuis la rébellion d'Adam et Ève contre leurs créateurs, « Ceux-qui-étaient-là-avant ». Les humains ayant incarné la lutte pour le libre arbitre et contre l'oppression des peuples sont considérés aujourd'hui par certains comme des proto-Assassins, admirés pour leurs actes. Depuis au moins 456 avant J.-C., après l'assassinat du tyran Xerxès Ier par Darius, les actions des Assassins traversèrent les siècles, en agissant activement durant l'Empire romain, le Moyen Âge, la Renaissance, la Révolution industrielle jusqu'à l'ère moderne.",
+            "parent": "Ceux qu'on ne voit pas"
+        },
+        {
+            "name": "Ordre des Anciens",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/21/ACO_Logo_Ordre_des_Anciens.png/revision/latest?cb=20201127215327&path-prefix=fr",
+            "description": "L'Ordre des Anciens, parfois appelé le Serpent, était une organisation secrète originaire d'Égypte cherchant à utiliser les reliques des anciens dieux pour promouvoir la paix. Fondé vers 1334 av. J.-C. par le pharaon Smenkhkarê, les principes de l'Ordre étaient basés sur la croyance que les êtres humains étaient, par nature, prédisposés au chaos et à la violence. Ainsi, l'ordre devait être imposé à l'ensemble de la société par les plus forts et les plus sages de ses membres, dont l'objectif ultime était de reconstituer la société Isu qu'ils vénéraient.\n\nL'Ordre étendit sont influence à l'ensemble du monde antique, notamment en Perse où il manipula les rois de l'Empire achéménide. Au Ier siècle avant notre ère, l'Ordre régna sur toutes les sphères de l'Égypte en profitant du jeune Ptolémée XIII. À sa mort, ils se rangèrent derrière Cléopâtre et Jules César, par le biais desquels ils purent jouer un rôle central dans l'instauration du nouvel Empire romain. Au IXe siècle de notre ère, l'essor du christianisme et de l'islam avait commencé à saper l'influence de l'Ordre qui parvint néanmoins à s'assurer un dernier bastion en Europe du nord-ouest.\n\nL'Ordre des Anciens est l'un des nombreux groupuscules qui finira par évoluer vers l'Ordre des Templiers un millénaire plus tard."
+        },
+        {
+            "name": "Ordre des Templiers",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8c/Croix_pat%C3%A9e.png/revision/latest?cb=20150703175120&path-prefix=fr",
+            "description": "L'Ordre des Templiers, aussi connu sous le nom d’Ordre des Chevaliers du Temple, est une organisation secrète dont l'histoire remonte à plusieurs millénaires. L’Ordre fut fragmenté et employa diverses appellations au cours de l’Histoire, comme celle de l'Ordre des Anciens, mais il a la réputation d’avoir existé depuis l’aube de l’Humanité, dès l’instant où les Hommes se sont libérés de leurs mystérieux prédécesseurs, Ceux-qui-étaient-là-avant. Selon certaines sources, il fut un temps où Assassins et Templiers partageaient les mêmes idéaux, les mêmes rêves et les mêmes espoirs. Si les deux groupes avaient réellement des objectifs communs, cette époque est révolue depuis longtemps. Aussi loin que remonte l’Histoire, la Confrérie des Assassins et l’Ordre des Templiers se sont toujours livrés une guerre secrète et les deux factions n’ont cessé de rivaliser pour imposer leurs visions antithétiques de l’avenir de l’Humanité. Même si les méthodes qu’ils emploient peuvent parfois sembler sévères, les membres de l’Ordre des Templiers pensent réellement œuvrer pour le bien de l’Humanité. Contrairement aux Assassins, qui se considèrent comme les premiers défenseurs de la liberté des peuples, les Templiers sont convaincus que c’est grâce à une ingénieuse manipulation des masses, que l’humanité atteindra le maximum de son potentiel.",
+            "parent": "Ordre des Anciens"
+        },
+        {
+            "name": "Culte de Kosmos",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8f/ACOD_Embleme_Culte_de_Kosmos.png/revision/latest?cb=20201114104746&path-prefix=fr",
+            "description": "Le Culte de Kosmos était une organisation secrète opérant dans toute la Grèce au Ve siècle avant notre ère. Le Culte adorait une divinité appelée Kosmos et complotait dans l'ombre pour contrôler le monde hellénique et servir ses propres intérêts. À cette fin, ses membres infiltrèrent tous les secteurs de la société grecque, forçant même la Pythie à être leur marionnette. Avec des membres très influents, ils étaient directement responsables de catalyser la guerre du Péloponnèse, qu'ils espéraient prolonger autant que possible en manipulant les deux côtés du conflit."
+        }
+    ],
+    "characters": [
+        {
+            "name": "Altaïr Ibn-La'Ahad",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/88/Alta%C3%AFr-full.png/revision/latest?cb=20121218181237&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Ezio Auditore da Firenze",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/e/e8/Ezio-full.png/revision/latest?cb=20221211122412&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Ratonhnhaké:ton",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/96/Connor_full.png/revision/latest?cb=20150618153839&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Edward Kenway",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d9/Img-edward.png/revision/latest?cb=20131218213003&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Shay Cormac",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/a/a0/ACRG_Shay_sans_capuche_render.png/revision/latest/scale-to-width-down/1000?cb=20140902133146&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Ordre des Templiers"
+        },
+        {
+            "name": "Arno Dorian",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/27/ACU_Arno_render_store_Ubi.png/revision/latest?cb=20170715174220&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Jacob Frye",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/95/ACS_Jacob_render_boutique.png/revision/latest?cb=20161101190845&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Evie Frye",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/5/5b/ACS_Evie_Frye_prop_2.png/revision/latest/scale-to-width-down/1000?cb=20160821225243&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Bayek de Siwa",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/3/36/Bayek_Senu_render.png/revision/latest/scale-to-width-down/1000?cb=20170821233203&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Ceux qu'on ne voit pas"
+        },
+        {
+            "name": "Kassandra",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/4/4a/Kassandra.png/revision/latest?cb=20180613095141&path-prefix=fr",
+            "is": "Personnage Principal"
+        },
+        {
+            "name": "Eivor Varinsdóttir",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/87/ACV-Eivor2-femme.png/revision/latest?cb=20200715222844&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Ceux qu'on ne voit pas"
+        },
+        {
+            "name": "Basim Ibn Ishaq",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/6/66/ACV_Basim-full.png/revision/latest?cb=20201015213249&path-prefix=fr",
+            "is": "Personnage Principal",
+            "belongs to": "Ceux qu'on ne voit pas"
+        }
+    ]
+}

@@ -108,5 +108,75 @@
     "node1" : "Assassin's Creed Origins",
     "node2" : "Égypte Antique",
     "name" : "pendant"
+  },
+  {
+    "node1" : "Altaïr Ibn-La'Ahad",
+    "node2" : "Assassin's Creed",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Ezio Auditore da Firenze",
+    "node2" : "Assassin's Creed II",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Ezio Auditore da Firenze",
+    "node2" : "Assassin's Creed Brotherhood",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Ezio Auditore da Firenze",
+    "node2" : "Assassin's Creed Revelations",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Ratonhnhaké:ton",
+    "node2" : "Assassin's Creed III",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Edward Kenway",
+    "node2" : "Assassin's Creed IV Black Flag",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Shay Cormac",
+    "node2" : "Assassin's Creed Rogue",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Arno Dorian",
+    "node2" : "Assassin's Creed Unity",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Jacob Frye",
+    "node2" : "Assassin's Creed Syndicate",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Evie Frye",
+    "node2" : "Assassin's Creed Syndicate",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Bayek de Siwa",
+    "node2" : "Assassin's Creed Origins",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Eivor Varinsdóttir",
+    "node2" : "Assassin's Creed Valhalla",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Basim Ibn Ishaq",
+    "node2" : "Assassin's Creed Mirage",
+    "name" : "apparait dans"
   }
 ]
