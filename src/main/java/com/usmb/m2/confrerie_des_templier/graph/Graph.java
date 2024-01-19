@@ -39,7 +39,7 @@ public class Graph {
         }
         else {
             HashMap<Node, Double> nodeMap = new HashMap<>();
-            addNodeRec(start, nodeMap, maxDepth);
+            addNodeRec(start, start, nodeMap, maxDepth);
             double max = 0;
             for (Double value : nodeMap.values()) {
                 if (value > max) {
@@ -72,16 +72,19 @@ public class Graph {
         }
     }
 
-    private void addNodeRec(Node node, HashMap<Node, Double> nodeMap, int depth) {
+    private void addNodeRec(Node start, Node node, HashMap<Node, Double> nodeMap, int depth) {
         if (depth == 0) {
             return;
         }
         for (Edge edge : node.getEdges()) {
             Node neighbour = edge.getOtherNode(node);
+            if (neighbour.equals(start)) {
+                continue;
+            }
             if (!neighbour.isConcept()) {;
                 nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0.0) + Math.pow(depth, 2));
             }
-            addNodeRec(neighbour, nodeMap, depth - 1);
+            addNodeRec(start, neighbour, nodeMap, depth - 1);
         }
     }
 
