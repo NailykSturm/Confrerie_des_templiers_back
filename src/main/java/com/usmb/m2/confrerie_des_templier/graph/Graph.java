@@ -66,7 +66,6 @@ public class Graph {
                 makeConceptSubGraphRec(neighbour, nodeSet, edges);
             }
         }
-
     }
 
     private void addNodeRec(Node start, HashMap<Node, Integer> nodeMap, int depth) {
@@ -76,7 +75,7 @@ public class Graph {
         for (Edge edge : start.getEdges()) {
             Node neighbour = edge.getOtherNode(start);
             if (!neighbour.isConcept()) {
-                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0) + 1);
+                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0) + depth);
             }
             addNodeRec(neighbour, nodeMap, depth - 1);
         }
