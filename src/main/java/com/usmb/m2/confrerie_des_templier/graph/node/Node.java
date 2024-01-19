@@ -5,6 +5,7 @@ import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 public abstract class Node {
     private static int idCounter = 0;
@@ -77,5 +78,14 @@ public abstract class Node {
         return "Node{" +
                 "name='" + getName() + '\'' +
                 '}';
+    }
+
+    public Optional<Edge> findEdge(Node node) {
+        for (Edge edge : edges) {
+            if (edge.getOtherNode(this) == node) {
+                return Optional.of(edge);
+            }
+        }
+        return Optional.empty();
     }
 }

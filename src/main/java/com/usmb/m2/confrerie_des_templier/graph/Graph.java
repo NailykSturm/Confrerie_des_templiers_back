@@ -29,8 +29,8 @@ public class Graph {
         Node start = nodes.get(name);
         List<HashMap<String, Object>> nodesJson = new ArrayList<>();
         List<EdgeDTO> edges = new ArrayList<>();
-        Set<Node> nodeSet = new HashSet<>();
         if (start.isConcept()) {
+            Set<Node> nodeSet = new HashSet<>();
             nodeSet.add(start);
             makeConceptSubGraphRec(start, nodeSet, edges);
             for (Node node : nodeSet) {
@@ -38,19 +38,22 @@ public class Graph {
             }
         }
         else {
-            HashMap<Node, Double> nodeMap = new HashMap<>();
+            HashMap<Node, PathAndValue> nodeMap = new HashMap<>();
             addNodeRec(start, nodeMap, maxDepth);
+            System.out.println(nodeMap);
             double max = 0;
-            for (Double value : nodeMap.values()) {
-                if (value > max) {
-                    max = value;
+            for (PathAndValue value : nodeMap.values()) {
+                if (value.value > max) {
+                    max = value.value;
                 }
             }
+            nodesJson.add(start.toJson());
             for (Node node : nodeMap.keySet()) {
-                double weight = nodeMap.get(node) / max;
+                PathAndValue pathAndValue = nodeMap.get(node);
+                double weight = pathAndValue.value / max;
                 if (weight > 0.2) {
                     nodesJson.add(node.toJson());
-                    EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), weight);
+                    EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), pathAndValue.shortestPath(),weight);
                     edges.add(edgeDTO);
                 }
             }
@@ -64,21 +67,31 @@ public class Graph {
             if (edge.node2() == neighbour)
                 continue;
             boolean added = nodeSet.add(neighbour);
-            edges.add(new EdgeDTO(start.getId(), neighbour.getId(), 1));
+            edges.add(new EdgeDTO(start.getId(), neighbour.getId(), "is", 1));
             if (neighbour.isConcept() && added) {
                 makeConceptSubGraphRec(neighbour, nodeSet, edges);
             }
         }
     }
 
-    private void addNodeRec(Node start, HashMap<Node, Double> nodeMap, int depth) {
+    private void addNodeRec(Node start, HashMap<Node, PathAndValue> nodeMap, int depth) {
         if (depth == 0) {
             return;
         }
         for (Edge edge : start.getEdges()) {
             Node neighbour = edge.getOtherNode(start);
             if (!neighbour.isConcept()) {
-                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0d) + Math.pow(depth, 2));
+                PathAndValue pathAndValue;
+                if (nodeMap.containsKey(neighbour)) {
+                    pathAndValue = nodeMap.get(neighbour);
+                }
+                else {
+                    pathAndValue = new PathAndValue();
+                    nodeMap.put(neighbour, pathAndValue);
+                    pathAndValue.path.add(start);
+                }
+                pathAndValue.path.add(neighbour);
+                pathAndValue.value += Math.pow(depth, 2);
             }
             addNodeRec(neighbour, nodeMap, depth - 1);
         }

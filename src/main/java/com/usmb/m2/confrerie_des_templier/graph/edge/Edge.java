@@ -23,6 +23,6 @@ public record Edge(Node node1, Node node2, String name) {
     }
 
     public EdgeDTO toDTO() {
-        return new EdgeDTO(node1.getId(), node2.getId(), 0);
+        return new EdgeDTO(node1.getId(), node2.getId(), name, 0);
     }
 }

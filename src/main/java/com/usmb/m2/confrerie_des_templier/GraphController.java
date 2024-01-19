@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class GraphController {
     private final int MAX_DEPTH = 3;
-    private final int MAX_NODES = 50;
     private final GraphService graphService;
 
     public GraphController(GraphService graphService) {
@@ -17,7 +16,7 @@ public class GraphController {
 
     @GetMapping
     public GraphDTO getGraph() {
-        return graphService.getGraph("Assassin's Creed", MAX_DEPTH);
+        return graphService.getGraph("Jeu vidéo", MAX_DEPTH);
     }
 
     @GetMapping("/{start}")
