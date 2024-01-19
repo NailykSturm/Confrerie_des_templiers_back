@@ -6,12 +6,17 @@ import com.usmb.m2.confrerie_des_templier.GraphDTO;
 import com.usmb.m2.confrerie_des_templier.graph.Graph;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import com.usmb.m2.confrerie_des_templier.graph.node.*;
+import com.usmb.m2.confrerie_des_templier.graph.node.Character;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
@@ -29,6 +34,7 @@ public class GraphService {
             initTimeline(path, objectMapper);
             initLocations(path, objectMapper);
             initSupports(path, objectMapper);
+            initCharactersAndFactions(path, objectMapper);
             initRelations(path, objectMapper);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -48,7 +54,8 @@ public class GraphService {
         new Edge(principale, gameConcept, "is");
 
         File file = new File(path + "games.json");
-        JsonNode jsonNode = objectMapper.readTree(file);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode jsonNode = objectMapper.readTree(reader);
         JsonNode main = jsonNode.get("principale");
         JsonNode spinOff = jsonNode.get("spinOff");
         for (JsonNode node : main) {
@@ -86,25 +93,11 @@ public class GraphService {
         new Edge(isu, timeline, "is");
 
         File file = new File(path + "timelines.json");
-        JsonNode jsonNode = objectMapper.readTree(file);
-        for (Iterator<Map.Entry<String, JsonNode>> it = jsonNode.fields(); it.hasNext(); ) {
-            Map.Entry<String, JsonNode> nodes = it.next();
-            String type = nodes.getKey();
-            for (JsonNode node : nodes.getValue()) {
-                Timeline t = objectMapper.treeToValue(node, Timeline.class);
-                graph.addNode(t);
-                switch (type) {
-                    case "Present":
-                        new Edge(t, present, "is");
-                        break;
-                    case "Past":
-                        new Edge(t, past, "is");
-                        break;
-                    case "Isu":
-                        new Edge(t, isu, "is");
-                        break;
-                }
-            }
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode jsonNode = objectMapper.readTree(reader);
+        for (JsonNode node : jsonNode) {
+            Timeline t = objectMapper.treeToValue(node, Timeline.class);
+            graph.addNode(t);
         }
     }
 
@@ -112,7 +105,8 @@ public class GraphService {
         Node locationConcept = new Concept("Localisation");
         graph.addNode(locationConcept);
         File file = new File(path + "locations.json");
-        JsonNode locationNodes = objectMapper.readTree(file);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode locationNodes = objectMapper.readTree(reader);
         for (JsonNode node : locationNodes) {
             Location location = new Location();
             location.setName(node.get("name").asText());
@@ -132,7 +126,8 @@ public class GraphService {
         graph.addNode(manufacturerConcept);
         graph.addNode(generationConcept);
         File file = new File(path + "supports.json");
-        JsonNode fileNodes = objectMapper.readTree(file);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode fileNodes = objectMapper.readTree(reader);
         JsonNode manufacturerNode = fileNodes.get("manufacturers");
         for (JsonNode jsonNode : manufacturerNode) {
             Node node = new Concept(jsonNode.asText());
@@ -166,18 +161,61 @@ public class GraphService {
         }
     }
 
+    private void initCharactersAndFactions(String path, ObjectMapper objectMapper) throws IOException {
+        Node factionConcept = new Concept("Faction");
+        Node characterConcept = new Concept("Personnage");
+        graph.addNode(factionConcept);
+        graph.addNode(characterConcept);
+        File file = new File(path + "characters.json");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode fileNodes = objectMapper.readTree(reader);
+        JsonNode typeCharacterNode = fileNodes.get("type");
+        for (JsonNode jsonNode : typeCharacterNode) {
+            Node node = new Concept(jsonNode.asText());
+            this.graph.addNode(node);
+            new Edge(node, characterConcept, "is");
+        }
+        JsonNode factionNode = fileNodes.get("factions");
+        for (JsonNode jsonNode : factionNode) {
+            Faction faction = new Faction();
+            faction.setName(jsonNode.get("name").asText());
+            faction.setImg(jsonNode.get("img").asText());
+            faction.setDescription(jsonNode.get("description").asText());
+            if (jsonNode.has("parent")) {
+                new Edge(faction, graph.searchNode(jsonNode.get("parent").asText()).get(), "extends");
+            } else {
+                new Edge(faction, factionConcept, "is");
+            }
+            this.graph.addNode(faction);
+        }
+        JsonNode characterNode = fileNodes.get("characters");
+        for (JsonNode jsonNode : characterNode) {
+            Character character = new Character();
+            character.setName(jsonNode.get("name").asText());
+            character.setImg(jsonNode.get("img").asText());
+            if (jsonNode.has("belongs to")) {
+                new Edge(character, graph.searchNode(jsonNode.get("belongs to").asText()).get(), "belongs to");
+            }
+            if (jsonNode.has("is")) {
+                new Edge(character, graph.searchNode(jsonNode.get("is").asText()).get(), "is");
+            }
+            this.graph.addNode(character);
+        }
+    }
+
     private void initRelations(String path, ObjectMapper objectMapper) throws IOException {
         File file = new File(path + "relations.json");
-        JsonNode fileNodes = objectMapper.readTree(file);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        JsonNode fileNodes = objectMapper.readTree(reader);
         for (JsonNode jsonNode : fileNodes) {
             Optional<Node> opt = this.graph.searchNode(jsonNode.get("node1").asText());
             if (opt.isEmpty()) {
-                throw new RuntimeException("Node not found");
+                throw new RuntimeException("Node not found " + jsonNode.get("node1").asText());
             }
             Node node1 = opt.get();
             opt = this.graph.searchNode(jsonNode.get("node2").asText());
             if (opt.isEmpty()) {
-                throw new RuntimeException("Node not found");
+                throw new RuntimeException("Node not found " + jsonNode.get("node2").asText());
             }
             Node node2 = opt.get();
             new Edge(node1, node2, jsonNode.get("name").asText());
