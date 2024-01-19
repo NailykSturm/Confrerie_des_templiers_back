@@ -38,18 +38,21 @@ public class Graph {
             }
         }
         else {
-            HashMap<Node, Integer> nodeMap = new HashMap<>();
+            HashMap<Node, Double> nodeMap = new HashMap<>();
             addNodeRec(start, nodeMap, maxDepth);
-            int max = 0;
-            for (Integer value : nodeMap.values()) {
+            double max = 0;
+            for (Double value : nodeMap.values()) {
                 if (value > max) {
                     max = value;
                 }
             }
             for (Node node : nodeMap.keySet()) {
-                nodesJson.add(node.toJson());
-                EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), nodeMap.get(node) / (double) max);
-                edges.add(edgeDTO);
+                double weight = nodeMap.get(node) / max;
+                if (weight > 0.2) {
+                    nodesJson.add(node.toJson());
+                    EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), weight);
+                    edges.add(edgeDTO);
+                }
             }
         }
         return new GraphDTO(nodesJson, edges);
@@ -68,14 +71,14 @@ public class Graph {
         }
     }
 
-    private void addNodeRec(Node start, HashMap<Node, Integer> nodeMap, int depth) {
+    private void addNodeRec(Node start, HashMap<Node, Double> nodeMap, int depth) {
         if (depth == 0) {
             return;
         }
         for (Edge edge : start.getEdges()) {
             Node neighbour = edge.getOtherNode(start);
             if (!neighbour.isConcept()) {
-                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0) + depth);
+                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0d) + Math.pow(depth, 2));
             }
             addNodeRec(neighbour, nodeMap, depth - 1);
         }
