@@ -38,22 +38,20 @@ public class Graph {
             }
         }
         else {
-            HashMap<Node, PathAndValue> nodeMap = new HashMap<>();
-            addNodeRec(start, start, nodeMap, maxDepth);
-            System.out.println(nodeMap);
+            HashMap<Node, Double> nodeMap = new HashMap<>();
+            addNodeRec(start, nodeMap, maxDepth);
             double max = 0;
-            for (PathAndValue value : nodeMap.values()) {
-                if (value.value > max) {
-                    max = value.value;
+            for (Double value : nodeMap.values()) {
+                if (value > max) {
+                    max = value;
                 }
             }
             nodesJson.add(start.toJson());
             for (Node node : nodeMap.keySet()) {
-                PathAndValue pathAndValue = nodeMap.get(node);
-                double weight = pathAndValue.value / max;
+                double weight = nodeMap.get(node) / max;
                 if (weight > 0.2) {
                     nodesJson.add(node.toJson());
-                    EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), pathAndValue.shortestPath(),weight);
+                    EdgeDTO edgeDTO = new EdgeDTO(start.getId(), node.getId(), getShortestPath(start, node),weight);
                     edges.add(edgeDTO);
                 }
             }
@@ -74,26 +72,52 @@ public class Graph {
         }
     }
 
-    private void addNodeRec(Node start, Node node, HashMap<Node, PathAndValue> nodeMap, int depth) {
+    private void addNodeRec(Node node, HashMap<Node, Double> nodeMap, int depth) {
         if (depth == 0) {
             return;
         }
         for (Edge edge : node.getEdges()) {
             Node neighbour = edge.getOtherNode(node);
-            if (!neighbour.isConcept()) {
-                PathAndValue pathAndValue;
-                if (nodeMap.containsKey(neighbour)) {
-                    pathAndValue = nodeMap.get(neighbour);
-                }
-                else {
-                    pathAndValue = new PathAndValue();
-                    nodeMap.put(neighbour, pathAndValue);
-                    pathAndValue.path.add(start);
-                }
-                pathAndValue.path.add(neighbour);
-                pathAndValue.value += Math.pow(depth, 2);
+            if (!neighbour.isConcept()) {;
+                nodeMap.put(neighbour, nodeMap.getOrDefault(neighbour, 0.0) + Math.pow(depth, 2));
             }
-            addNodeRec(start, neighbour, nodeMap, depth - 1);
+            addNodeRec(neighbour, nodeMap, depth - 1);
         }
+    }
+
+    private String getShortestPath(Node start, Node end) {
+        Queue<Node> queue = new LinkedList<>();
+        Map<Node, Node> parent = new HashMap<>();
+        queue.add(start);
+        parent.put(start, null);
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            if (node.equals(end)) {
+                break;
+            }
+            for (Edge edge : node.getEdges()) {
+                Node neighbour = edge.getOtherNode(node);
+                if (!parent.containsKey(neighbour)) {
+                    queue.add(neighbour);
+                    parent.put(neighbour, node);
+                }
+            }
+        }
+        if (!parent.containsKey(end)) {
+            return null;
+        }
+        StringBuilder path = new StringBuilder();
+        Node node = end;
+        while (node != null) {
+            path.insert(0, node.getName());
+            Node p = parent.get(node);
+            if (p != null) {
+                path.insert(0, "]- ");
+                path.insert(0, node.findEdge(p).orElseThrow().name());
+                path.insert(0, " -[");
+            }
+            node = p;
+        }
+        return path.toString();
     }
 }
