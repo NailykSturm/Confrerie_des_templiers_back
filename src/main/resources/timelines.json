@@ -28,5 +28,10 @@
     "name": "Égypte Antique",
     "begin": "-3150",
     "end": "-30"
+  },
+  {
+    "name": "Présent",
+    "begin": "2012",
+    "end": "2024"
   }
 ]

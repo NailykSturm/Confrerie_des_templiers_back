@@ -178,5 +178,145 @@
     "node1" : "Basim Ibn Ishaq",
     "node2" : "Assassin's Creed Mirage",
     "name" : "apparait dans"
+  },
+  {
+    "node1" : "Léonard de Vinci",
+    "node2" : "Assassin's Creed II",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Léonard de Vinci",
+    "node2" : "Assassin's Creed Revelations",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Léonard de Vinci",
+    "node2" : "Assassin's Creed Brotherhood",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Socrate",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Pythagore",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Pythagore",
+    "node2" : "Kassandra",
+    "name" : "est le père"
+  },
+  {
+    "node1" : "Louis XVI",
+    "node2" : "Assassin's Creed Unity",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Benjamin Franklin",
+    "node2" : "Assassin's Creed III",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Benjamin Franklin",
+    "node2" : "Assassin's Creed: Rogue",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Ezio Auditore da Firenze",
+    "node2" : "Altaïr Ibn-La'Ahad",
+    "name" : "est un descendant"
+  },
+  {
+    "node1" : "Edward Thatch",
+    "node2" : "Assassin's Creed IV Black Flag",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Edward Thatch",
+    "node2" : "Edward Kenway",
+    "name" : "connait"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Socrate",
+    "name" : "connait"
+  },
+  {
+    "node1" : "Ratonhnhaké:ton",
+    "node2" : "Benjamin Franklin",
+    "name" : "connait"
+  },
+  {
+    "node1" : "Léonard de Vinci",
+    "node2" : "Ezio Auditore da Firenze",
+    "name" : "ami de"
+  },
+  {
+    "node1" : "Layla Hassan",
+    "node2" : "Assassin's Creed Origins",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Layla Hassan",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Layla Hassan",
+    "node2" : "Assassin's Creed Valhalla",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Assassin's Creed",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Assassin's Creed II",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Assassin's Creed Brotherhood",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Assassin's Creed Revelations",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Assassin's Creed III",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Desmond Miles",
+    "node2" : "Présent",
+    "name" : "est dans la timeline"
+  },
+  {
+    "node1" : "Layla Hassan",
+    "node2" : "Présent",
+    "name" : "est dans la timeline"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Présent",
+    "name" : "est dans la timeline"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Grèce Antique",
+    "name" : "est dans la timeline"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Layla Hassan",
+    "name" : "se rencontre dans le présent"
   }
 ]

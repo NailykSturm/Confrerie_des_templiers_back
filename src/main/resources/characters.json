@@ -100,6 +100,46 @@
             "img": "https://static.wikia.nocookie.net/assassinscreed/images/6/66/ACV_Basim-full.png/revision/latest?cb=20201015213249&path-prefix=fr",
             "is": "Personnage Principal",
             "belongs to": "Ceux qu'on ne voit pas"
+        },
+        {
+            "name": "Léonard de Vinci",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/99/Leonardo_da_Vinci.png/revision/latest/scale-to-width-down/1000?cb=20230415095002&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Socrate",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/12/ACOD_-_D%C3%A9tourage_Socrate.png/revision/latest/scale-to-width-down/1000?cb=20220918102957&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Pythagore",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/5/5e/ACOD_Pythagore.png/revision/latest?cb=20210114222352&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Louis XVI",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/b/b3/ACU_Louis_XVI_render_par_Fabien_Troncal_01.png/revision/latest?cb=20160321204424&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Benjamin Franklin",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8d/ACIII_Benjamin_Franklin_render.png/revision/latest?cb=20151019185807&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Edward Thatch",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/a/a7/Barbe_Noire_3.png/revision/latest?cb=20131021145625&path-prefix=fr",
+            "is": "Personnage Historique"
+        },
+        {
+            "name": "Layla Hassan",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/0/0e/ACOD_Layla_Hassan_render.png/revision/latest?cb=20201121000955&path-prefix=fr",
+            "is": "Personnage Secondaire"
+        },
+        {
+            "name": "Desmond Miles",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/1c/Img-desmond.png/revision/latest?cb=20131218213003&path-prefix=fr",
+            "is": "Personnage Secondaire"
         }
     ]
 }
