@@ -323,5 +323,55 @@
     "node1" : "Kassandra",
     "node2" : "Alexios",
     "name" : "frère et soeurs"
+  },
+  {
+    "node1" : "Alexios",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Aspasia",
+    "node2" : "Assassin's Creed Odyssey",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Jules César",
+    "node2" : "Assassin's Creed Origins",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Smenkhkarê",
+    "node2" : "Assassin's Creed Origins",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Haytham Kenway",
+    "node2" : "Assassin's Creed III",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Haytham Kenway",
+    "node2" : "Assassin's Creed Rogue",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Edward Kenway",
+    "node2" : "Haytham Kenway",
+    "name" : "est le père"
+  },
+  {
+    "node1" : "Haytham Kenway",
+    "node2" : "Ratonhnhaké:ton",
+    "name" : "est le père"
+  },
+  {
+    "node1" : "François de la Serre",
+    "node2" : "Assassin's Creed Unity",
+    "name" : "apparait dans"
+  },
+  {
+    "node1" : "Robert de Sablé",
+    "node2" : "Assassin's Creed",
+    "name" : "apparait dans"
   }
 ]
