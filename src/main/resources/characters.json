@@ -154,6 +154,36 @@
             "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/23/ACOD_Aspasia_render.png/revision/latest?cb=20200826090934&path-prefix=fr",
             "is": "Personnage Secondaire",
             "belongs to": "Culte de Kosmos"
+        },
+        {
+            "name": "Jules César",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d6/ACO_Jules_C%C3%A9sar_render.png/revision/latest/scale-to-width-down/1000?cb=20170822225239&path-prefix=fr",
+            "is": "Personnage Historique",
+            "belongs to": "Ordre des Anciens"
+        },
+        {
+            "name": "Smenkhkarê",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/0/03/ACO_Smenkhkar%C3%AA.jpg/revision/latest/scale-to-width-down/1000?cb=20190919221645&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Ordre des Anciens"
+        },
+        {
+            "name": "Haytham Kenway",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d1/ACRO_Haytham_Kenway.png/revision/latest?cb=20141013184831&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Ordre des Templiers"
+        },
+        {
+            "name": "François de la Serre",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/18/ACU_Fran%C3%A7ois_de_la_Serre_BDA.png/revision/latest?cb=20170727111311&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Ordre des Templiers"
+        },
+        {
+            "name": "Robert de Sablé",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/7/7d/Robert_de_Sable_2.png/revision/latest?cb=20141121221040&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Ordre des Templiers"
         }
     ]
 }
