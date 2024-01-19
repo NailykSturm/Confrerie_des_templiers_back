@@ -221,7 +221,7 @@
   },
   {
     "node1" : "Benjamin Franklin",
-    "node2" : "Assassin's Creed: Rogue",
+    "node2" : "Assassin's Creed Rogue",
     "name" : "apparait dans"
   },
   {
@@ -318,5 +318,10 @@
     "node1" : "Kassandra",
     "node2" : "Layla Hassan",
     "name" : "se rencontre dans le présent"
+  },
+  {
+    "node1" : "Kassandra",
+    "node2" : "Alexios",
+    "name" : "frère et soeurs"
   }
 ]

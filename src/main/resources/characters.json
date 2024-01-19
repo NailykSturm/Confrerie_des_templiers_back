@@ -134,12 +134,26 @@
         {
             "name": "Layla Hassan",
             "img": "https://static.wikia.nocookie.net/assassinscreed/images/0/0e/ACOD_Layla_Hassan_render.png/revision/latest?cb=20201121000955&path-prefix=fr",
-            "is": "Personnage Secondaire"
+            "is": "Personnage Secondaire",
+            "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Desmond Miles",
             "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/1c/Img-desmond.png/revision/latest?cb=20131218213003&path-prefix=fr",
-            "is": "Personnage Secondaire"
+            "is": "Personnage Secondaire",
+            "belongs to": "Confrérie des Assassins"
+        },
+        {
+            "name": "Alexios",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/b/b9/Deimos.png/revision/latest?cb=20210110135221&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Culte de Kosmos"
+        },
+        {
+            "name": "Aspasia",
+            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/23/ACOD_Aspasia_render.png/revision/latest?cb=20200826090934&path-prefix=fr",
+            "is": "Personnage Secondaire",
+            "belongs to": "Culte de Kosmos"
         }
     ]
 }
