@@ -1,13 +1,11 @@
 package com.usmb.m2.confrerie_des_templier;
 
 import com.usmb.m2.confrerie_des_templier.service.GraphService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/graph")
+@CrossOrigin(origins = "*")
 public class GraphController {
     private final int MAX_DEPTH = 3;
     private final int MAX_NODES = 50;
