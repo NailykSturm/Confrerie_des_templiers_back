@@ -39,7 +39,7 @@ public class Graph {
         }
         else {
             HashMap<Node, PathAndValue> nodeMap = new HashMap<>();
-            addNodeRec(start, nodeMap, maxDepth);
+            addNodeRec(start, start, nodeMap, maxDepth);
             System.out.println(nodeMap);
             double max = 0;
             for (PathAndValue value : nodeMap.values()) {
@@ -74,12 +74,12 @@ public class Graph {
         }
     }
 
-    private void addNodeRec(Node start, HashMap<Node, PathAndValue> nodeMap, int depth) {
+    private void addNodeRec(Node start, Node node, HashMap<Node, PathAndValue> nodeMap, int depth) {
         if (depth == 0) {
             return;
         }
-        for (Edge edge : start.getEdges()) {
-            Node neighbour = edge.getOtherNode(start);
+        for (Edge edge : node.getEdges()) {
+            Node neighbour = edge.getOtherNode(node);
             if (!neighbour.isConcept()) {
                 PathAndValue pathAndValue;
                 if (nodeMap.containsKey(neighbour)) {
@@ -93,7 +93,7 @@ public class Graph {
                 pathAndValue.path.add(neighbour);
                 pathAndValue.value += Math.pow(depth, 2);
             }
-            addNodeRec(neighbour, nodeMap, depth - 1);
+            addNodeRec(start, neighbour, nodeMap, depth - 1);
         }
     }
 }
