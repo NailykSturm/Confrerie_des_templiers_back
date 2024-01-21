@@ -1,7 +1,7 @@
 package com.usmb.m2.confrerie_des_templier.graph;
 
-import com.usmb.m2.confrerie_des_templier.EdgeDTO;
-import com.usmb.m2.confrerie_des_templier.GraphDTO;
+import com.usmb.m2.confrerie_des_templier.DTO.EdgeDTO;
+import com.usmb.m2.confrerie_des_templier.DTO.GraphDTO;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import com.usmb.m2.confrerie_des_templier.graph.node.Node;
 
@@ -122,5 +122,15 @@ public class Graph {
             node = p;
         }
         return path.toString();
+    }
+
+    public List<String> getAllConcept() {
+        List<String> concepts = new ArrayList<>();
+        for (Node node : nodes.values()) {
+            if (node.isConcept()) {
+                concepts.add(node.getName());
+            }
+        }
+        return concepts;
     }
 }

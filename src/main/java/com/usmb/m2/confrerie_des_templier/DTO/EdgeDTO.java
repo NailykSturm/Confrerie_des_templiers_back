@@ -1,4 +1,4 @@
-package com.usmb.m2.confrerie_des_templier;
+package com.usmb.m2.confrerie_des_templier.DTO;
 
 public class EdgeDTO {
     public final int id1;

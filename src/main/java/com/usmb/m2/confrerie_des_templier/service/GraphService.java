@@ -2,7 +2,7 @@ package com.usmb.m2.confrerie_des_templier.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.usmb.m2.confrerie_des_templier.GraphDTO;
+import com.usmb.m2.confrerie_des_templier.DTO.GraphDTO;
 import com.usmb.m2.confrerie_des_templier.graph.Graph;
 import com.usmb.m2.confrerie_des_templier.graph.edge.Edge;
 import com.usmb.m2.confrerie_des_templier.graph.node.*;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
-import java.util.Map;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -224,5 +224,9 @@ public class GraphService {
 
     public GraphDTO getGraph(String name, int maxDepth) {
         return this.graph.makeSubGraph(name, maxDepth);
+    }
+
+    public List<String> getAllConcept() {
+        return this.graph.getAllConcept();
     }
 }

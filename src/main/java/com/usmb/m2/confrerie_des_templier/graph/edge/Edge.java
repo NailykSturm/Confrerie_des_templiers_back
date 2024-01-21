@@ -1,6 +1,6 @@
 package com.usmb.m2.confrerie_des_templier.graph.edge;
 
-import com.usmb.m2.confrerie_des_templier.EdgeDTO;
+import com.usmb.m2.confrerie_des_templier.DTO.EdgeDTO;
 import com.usmb.m2.confrerie_des_templier.graph.node.Node;
 
 public record Edge(Node node1, Node node2, String name) {

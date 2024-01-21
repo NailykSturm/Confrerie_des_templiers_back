@@ -1,7 +1,11 @@
 package com.usmb.m2.confrerie_des_templier;
 
+import com.usmb.m2.confrerie_des_templier.DTO.GraphDTO;
+import com.usmb.m2.confrerie_des_templier.graph.node.Node;
 import com.usmb.m2.confrerie_des_templier.service.GraphService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/graph")
@@ -24,5 +28,9 @@ public class GraphController {
         return graphService.getGraph(start.replace('_', ' '), MAX_DEPTH);
     }
 
+    @GetMapping("concepts")
+    public List<String> getAllConcept() {
+        return graphService.getAllConcept();
+    }
 
 }
