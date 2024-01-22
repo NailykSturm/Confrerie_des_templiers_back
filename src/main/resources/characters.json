@@ -3,7 +3,7 @@
     "factions": [
         {
             "name": "Ceux qu'on ne voit pas",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/12/ACO_Insigne_Assassins_%C3%A9gyptiens.png/revision/latest/scale-to-width-down/1000?cb=20170614234327&path-prefix=fr",
+            "img": "https://toppng.com//public/uploads/preview/aco-logo-assassins-creed-origins-logo-11563235976qbipab58ff.png",
             "description": "Ceux qu'on ne voit pas était la première incarnation connue de la Confrérie des Assassins. Fondée en Égypte par le Medjaÿ Bayek de Siwa et son épouse, Aya d'Alexandrie en 47 avant notre ère, Ceux qu'on ne voit pas avaient pour principe de travailler dans l'ombre pour protéger le peuple de l'oppression et de l'injustice, afin de sauvegarder leur libre arbitre.\n\nLa création de cette faction était une réponse directe à l'Ordre des Anciens, un réseau très étendu et encore plus discret d'autocrates et de partisans de la suprématie des Isu. Inspiré par toutes les souffrances dont il fut témoin au long de ses activités passées en tant que Medjaÿ, Bayek conçut le Credo qui servirait de base à la philosophie des Assassins. Aya quant à elle, se rebaptisa Amunet, et permit à Ceux qu'on ne voit pas de s'étendre par delà les frontières de l'Égypte en établissant un réseau opérationnel à Rome. À eux deux, ils œuvrèrent dans l'ombre dans le but de dévoiler et saper le travail de l'Ordre, ainsi que d'en éliminer les membres lorsque l'occasion s'en présentait."
         },
         {
@@ -14,174 +14,174 @@
         },
         {
             "name": "Ordre des Anciens",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/21/ACO_Logo_Ordre_des_Anciens.png/revision/latest?cb=20201127215327&path-prefix=fr",
+            "img": "",
             "description": "L'Ordre des Anciens, parfois appelé le Serpent, était une organisation secrète originaire d'Égypte cherchant à utiliser les reliques des anciens dieux pour promouvoir la paix. Fondé vers 1334 av. J.-C. par le pharaon Smenkhkarê, les principes de l'Ordre étaient basés sur la croyance que les êtres humains étaient, par nature, prédisposés au chaos et à la violence. Ainsi, l'ordre devait être imposé à l'ensemble de la société par les plus forts et les plus sages de ses membres, dont l'objectif ultime était de reconstituer la société Isu qu'ils vénéraient.\n\nL'Ordre étendit sont influence à l'ensemble du monde antique, notamment en Perse où il manipula les rois de l'Empire achéménide. Au Ier siècle avant notre ère, l'Ordre régna sur toutes les sphères de l'Égypte en profitant du jeune Ptolémée XIII. À sa mort, ils se rangèrent derrière Cléopâtre et Jules César, par le biais desquels ils purent jouer un rôle central dans l'instauration du nouvel Empire romain. Au IXe siècle de notre ère, l'essor du christianisme et de l'islam avait commencé à saper l'influence de l'Ordre qui parvint néanmoins à s'assurer un dernier bastion en Europe du nord-ouest.\n\nL'Ordre des Anciens est l'un des nombreux groupuscules qui finira par évoluer vers l'Ordre des Templiers un millénaire plus tard."
         },
         {
             "name": "Ordre des Templiers",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8c/Croix_pat%C3%A9e.png/revision/latest?cb=20150703175120&path-prefix=fr",
+            "img": "https://www.kisscitymag.com/wp-content/uploads/2022/12/legende_les_templiers.jpeg",
             "description": "L'Ordre des Templiers, aussi connu sous le nom d’Ordre des Chevaliers du Temple, est une organisation secrète dont l'histoire remonte à plusieurs millénaires. L’Ordre fut fragmenté et employa diverses appellations au cours de l’Histoire, comme celle de l'Ordre des Anciens, mais il a la réputation d’avoir existé depuis l’aube de l’Humanité, dès l’instant où les Hommes se sont libérés de leurs mystérieux prédécesseurs, Ceux-qui-étaient-là-avant. Selon certaines sources, il fut un temps où Assassins et Templiers partageaient les mêmes idéaux, les mêmes rêves et les mêmes espoirs. Si les deux groupes avaient réellement des objectifs communs, cette époque est révolue depuis longtemps. Aussi loin que remonte l’Histoire, la Confrérie des Assassins et l’Ordre des Templiers se sont toujours livrés une guerre secrète et les deux factions n’ont cessé de rivaliser pour imposer leurs visions antithétiques de l’avenir de l’Humanité. Même si les méthodes qu’ils emploient peuvent parfois sembler sévères, les membres de l’Ordre des Templiers pensent réellement œuvrer pour le bien de l’Humanité. Contrairement aux Assassins, qui se considèrent comme les premiers défenseurs de la liberté des peuples, les Templiers sont convaincus que c’est grâce à une ingénieuse manipulation des masses, que l’humanité atteindra le maximum de son potentiel.",
             "parent": "Ordre des Anciens"
         },
         {
             "name": "Culte de Kosmos",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8f/ACOD_Embleme_Culte_de_Kosmos.png/revision/latest?cb=20201114104746&path-prefix=fr",
+            "img": "https://www.eclypsia.com/wp-content/uploads/eclypsia/2022/12/CulteKosmos.jpg",
             "description": "Le Culte de Kosmos était une organisation secrète opérant dans toute la Grèce au Ve siècle avant notre ère. Le Culte adorait une divinité appelée Kosmos et complotait dans l'ombre pour contrôler le monde hellénique et servir ses propres intérêts. À cette fin, ses membres infiltrèrent tous les secteurs de la société grecque, forçant même la Pythie à être leur marionnette. Avec des membres très influents, ils étaient directement responsables de catalyser la guerre du Péloponnèse, qu'ils espéraient prolonger autant que possible en manipulant les deux côtés du conflit."
         }
     ],
     "characters": [
         {
             "name": "Altaïr Ibn-La'Ahad",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/88/Alta%C3%AFr-full.png/revision/latest?cb=20121218181237&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/en/3/31/Alta%C3%AFr_Ibn-La%27Ahad.png",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Ezio Auditore da Firenze",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/e/e8/Ezio-full.png/revision/latest?cb=20221211122412&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/en/b/b9/Ezio_Auditore_da_Firenze.png",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Ratonhnhaké:ton",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/96/Connor_full.png/revision/latest?cb=20150618153839&path-prefix=fr",
+            "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F83%2Fd1%2F6f%2F83d16f54fac1a0485fa6473cafb23b09.jpg&f=1&nofb=1&ipt=cfd819d47d78da55e7b219f65dff8045fea466173e3fb487e7b7db22d7e94005&ipo=images",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Edward Kenway",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d9/Img-edward.png/revision/latest?cb=20131218213003&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/en/7/7a/EdwardKenway.png",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Shay Cormac",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/a/a0/ACRG_Shay_sans_capuche_render.png/revision/latest/scale-to-width-down/1000?cb=20140902133146&path-prefix=fr",
+            "img": "https://i1.sndcdn.com/artworks-000123696501-n8l8y2-t500x500.jpg",
             "is": "Personnage Principal",
             "belongs to": "Ordre des Templiers"
         },
         {
             "name": "Arno Dorian",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/27/ACU_Arno_render_store_Ubi.png/revision/latest?cb=20170715174220&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/en/1/10/ArnoDorian.png",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Jacob Frye",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/95/ACS_Jacob_render_boutique.png/revision/latest?cb=20161101190845&path-prefix=fr",
+            "img": "https://pbs.twimg.com/profile_images/598503127629762562/iFySk-lp_400x400.jpg",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Evie Frye",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/5/5b/ACS_Evie_Frye_prop_2.png/revision/latest/scale-to-width-down/1000?cb=20160821225243&path-prefix=fr",
+            "img": "https://i.pinimg.com/564x/75/9c/39/759c3994f11ad4e48691323ab9bf5859.jpg",
             "is": "Personnage Principal",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Bayek de Siwa",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/3/36/Bayek_Senu_render.png/revision/latest/scale-to-width-down/1000?cb=20170821233203&path-prefix=fr",
+            "img": "https://i.pinimg.com/originals/20/74/0b/20740bcfcda90d471676f949dc157868.jpg",
             "is": "Personnage Principal",
             "belongs to": "Ceux qu'on ne voit pas"
         },
         {
             "name": "Kassandra",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/4/4a/Kassandra.png/revision/latest?cb=20180613095141&path-prefix=fr",
+            "img": "https://cdn.vox-cdn.com/thumbor/QQEikY6eIssqrPqC8oYMqOdTmwE=/0x0:4588x2657/1200x675/filters:focal(1927x962:2661x1696)/cdn.vox-cdn.com/uploads/chorus_image/image/61597649/e9irhuudfu35eddwhxps.0.jpg",
             "is": "Personnage Principal"
         },
         {
             "name": "Eivor Varinsdóttir",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/87/ACV-Eivor2-femme.png/revision/latest?cb=20200715222844&path-prefix=fr",
+            "img": "https://assets.mycast.io/actor_images/actor-eivor-varinsdottir-328435_large.jpg",
             "is": "Personnage Principal",
             "belongs to": "Ceux qu'on ne voit pas"
         },
         {
             "name": "Basim Ibn Ishaq",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/6/66/ACV_Basim-full.png/revision/latest?cb=20201015213249&path-prefix=fr",
+            "img": "https://static.actu.fr/uploads/2023/10/446777-64dca4adf1ccf-960x640.jpg",
             "is": "Personnage Principal",
             "belongs to": "Ceux qu'on ne voit pas"
         },
         {
             "name": "Léonard de Vinci",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/9/99/Leonardo_da_Vinci.png/revision/latest/scale-to-width-down/1000?cb=20230415095002&path-prefix=fr",
+            "img": "https://www.sciencesetavenir.fr/assets/img/2023/03/30/cover-r4x3w1200-642559433ccbb-054-fara00999.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Socrate",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/12/ACOD_-_D%C3%A9tourage_Socrate.png/revision/latest/scale-to-width-down/1000?cb=20220918102957&path-prefix=fr",
+            "img": "https://medias.lavie.fr/api/v1/images/view/5fa16ff7d286c20dac589c97/width_1000/image.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Pythagore",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/5/5e/ACOD_Pythagore.png/revision/latest?cb=20210114222352&path-prefix=fr",
+            "img": "https://www.babelio.com/users/AVT_Pythagore_7783.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Louis XVI",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/b/b3/ACU_Louis_XVI_render_par_Fabien_Troncal_01.png/revision/latest?cb=20160321204424&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Louis_XVI_en_costume_de_sacre_-_Joseph-Siffred_Duplessis.jpg/640px-Louis_XVI_en_costume_de_sacre_-_Joseph-Siffred_Duplessis.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Benjamin Franklin",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/8/8d/ACIII_Benjamin_Franklin_render.png/revision/latest?cb=20151019185807&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/800px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Edward Thatch",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/a/a7/Barbe_Noire_3.png/revision/latest?cb=20131021145625&path-prefix=fr",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Edward_Teach_Commonly_Call%27d_Black_Beard_%28bw%29.jpg/1200px-Edward_Teach_Commonly_Call%27d_Black_Beard_%28bw%29.jpg",
             "is": "Personnage Historique"
         },
         {
             "name": "Layla Hassan",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/0/0e/ACOD_Layla_Hassan_render.png/revision/latest?cb=20201121000955&path-prefix=fr",
+            "img": "https://i.pinimg.com/originals/3a/32/31/3a323104efe1fba70dbe20d879772f58.jpg",
             "is": "Personnage Secondaire",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Desmond Miles",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/1c/Img-desmond.png/revision/latest?cb=20131218213003&path-prefix=fr",
+            "img": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/assassins-creed-3/a/ab/Zw-acb-2012-desmond-1.png",
             "is": "Personnage Secondaire",
             "belongs to": "Confrérie des Assassins"
         },
         {
             "name": "Alexios",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/b/b9/Deimos.png/revision/latest?cb=20210110135221&path-prefix=fr",
+            "img": "https://pm1.aminoapps.com/7074/ebf347b78f1d4e82f56ba544cadc7af2f86cdbd2r1-1287-849v2_uhq.jpg",
             "is": "Personnage Secondaire",
             "belongs to": "Culte de Kosmos"
         },
         {
             "name": "Aspasia",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/2/23/ACOD_Aspasia_render.png/revision/latest?cb=20200826090934&path-prefix=fr",
+            "img": "",
             "is": "Personnage Secondaire",
             "belongs to": "Culte de Kosmos"
         },
         {
             "name": "Jules César",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d6/ACO_Jules_C%C3%A9sar_render.png/revision/latest/scale-to-width-down/1000?cb=20170822225239&path-prefix=fr",
+            "img": "https://image.jimcdn.com/app/cms/image/transf/dimension=271x1024:format=jpg/path/sa763017ec85d1a4e/image/i3f9cdc47efbb4452/version/1665391559/biographie-jules-c%C3%A9sar-ce2.jpg",
             "is": "Personnage Historique",
             "belongs to": "Ordre des Anciens"
         },
         {
             "name": "Smenkhkarê",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/0/03/ACO_Smenkhkar%C3%AA.jpg/revision/latest/scale-to-width-down/1000?cb=20190919221645&path-prefix=fr",
+            "img": "",
             "is": "Personnage Secondaire",
             "belongs to": "Ordre des Anciens"
         },
         {
             "name": "Haytham Kenway",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/d/d1/ACRO_Haytham_Kenway.png/revision/latest?cb=20141013184831&path-prefix=fr",
+            "img": "https://pm1.aminoapps.com/6420/23c1dd1aeed3a030c3939364a994c7de74ba87de_hq.jpg",
             "is": "Personnage Secondaire",
             "belongs to": "Ordre des Templiers"
         },
         {
             "name": "François de la Serre",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/1/18/ACU_Fran%C3%A7ois_de_la_Serre_BDA.png/revision/latest?cb=20170727111311&path-prefix=fr",
+            "img": "",
             "is": "Personnage Secondaire",
             "belongs to": "Ordre des Templiers"
         },
         {
             "name": "Robert de Sablé",
-            "img": "https://static.wikia.nocookie.net/assassinscreed/images/7/7d/Robert_de_Sable_2.png/revision/latest?cb=20141121221040&path-prefix=fr",
+            "img": "",
             "is": "Personnage Secondaire",
             "belongs to": "Ordre des Templiers"
         }
